@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>实名认证</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="../../../css/light7.min.css">
+<link rel="stylesheet" href="../../../css/app.css">
+<link rel="stylesheet" href="../../../css/wj.css">
+<link rel="stylesheet" href="../../../css/zg.css?v=20170126">
+<script type='text/javascript' src='https://res.wx.qq.com/open/js/jweixin-1.0.0.js'></script>
+</head>
+<style>
+	.biubiu{
+		margin-top: 2rem;
+	}
+</style>
+<body>
+<div class="page wj_page" id="modifysecpwd">
+	
+	<div class="content">
+		<div class="list-block">
+			<div class="inhert-li">
+				<input type="text" id="realname" placeholder="请输入您的真实姓名">
+			</div>
+			<div class="inhert-li">
+				<input type="text" id="testid" placeholder="请输入您的身份证号">
+			</div>
+		</div>
+		<div class="newbutton biubiu" id="shiming">
+			完成
+		</div>
+	</div>
+</div>
+<script type='text/javascript' src='../../../js/jquery-2.2.1.min.js' charset='utf-8'></script> 
+<script type='text/javascript' src='../../../js/light7.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='../../../js/cn.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='../../../js/hprose.js' charset='utf-8'></script>
+<script type='text/javascript' src='../../../js/jiaohu.js?v=20170302' charset='utf-8'></script>
+<script>
+// $(document).on('click','#testid', function () {
+//    $.confirm('身份证号已被使用', function () {
+//    });
+//});  
+ /* $(document).on('click', '.confirm-ok-cancel',function () {
+      $.confirm('Are you sure?', 
+        function () {
+          $.alert('You clicked Ok button');
+        },
+        function () {
+          $.alert('You clicked Cancel button');
+        }
+      );
+  });
+  $(document).on('click','.confirm-title-ok', function () {
+      $.confirm('Are you sure?', 'Custom Title', function () {
+          $.alert('You clicked Ok button');
+      });
+  });
+  $(document).on('click','.confirm-title-ok-cancel', function () {
+      $.confirm('Are you sure?', 'Custom Title', 
+        function () {
+          $.alert('You clicked Ok button');
+        },
+        function () {
+          $.alert('You clicked Cancel button');
+        }
+      );
+  });    */
+</script>
+</body>
+</html>

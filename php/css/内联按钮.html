@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+</head>
+<body>
+
+<div data-role="page" id="内联按钮">
+  <div data-role="header">
+    <h1>欢迎来到我的主页</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">  <!--ui-content  为页面的边距-->
+    <p>普通（默认）按钮</p>
+    <a href="#pagetwo" class="ui-btn">访问第二个页面</a>
+    <p>内联按钮：</p>
+    <a href="#pagetwo" class="ui-btn ui-btn-inline">访问第二个页面</a>
+  </div>
+
+  <div data-role="footer">
+    <h1>底部文本</h1>
+  </div>
+</div> 
+
+
+<div data-role="page" id="pagetwo">
+  <div data-role="header">
+    <h1>欢迎来到我的主页</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">  <!--ui-content  为页面的边距-->
+    <p>普通（默认）按钮</p>
+    <a href="#内联按钮" class="ui-btn ui-btn-inline">访问第一个页面</a>
+    <a href="#内联按钮" class="ui-btn ui-btn-inline">访问第一个页面</a>
+    <a href="#内联按钮" class="ui-btn ui-btn-inline">访问第一个页面</a>
+  </div>
+<!--如果你想要一个仅是与内容一样宽的按钮，或者如果您想要并排显示两个或多个按钮，请添加 data-inline="true"-->
+  <div data-role="footer">
+    <h1>底部文本</h1>
+  </div>
+</div> 
+</body>
+<script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</html>

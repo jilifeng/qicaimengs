@@ -1,0 +1,17 @@
+CACHE MANIFEST 
+
+CACHE:
+/css/light7.min.css
+/css/light7-swiper.min.css
+/css/iconfont.css
+/css/zg.css?v=20170307
+/js/jquery-2.2.1.min.js
+/js/light7.min.js
+/js/hprose.js
+/js/light7-swiper.min.js
+/js/jiaohu.js
+/js/cn.min.js
+
+NETWORK:
+https://res.wx.qq.com/open/js/jweixin-1.0.0.js 
+

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>发现</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="../../css/light7.min.css">
+<link rel="stylesheet" href="../../css/zg.css?v=20170315">
+<link rel="stylesheet" href="../../css/iconfont.css">
+<script type='text/javascript' src='https://res.wx.qq.com/open/js/jweixin-1.0.0.js'></script>
+</head>
+<body>
+<div class="page scroll bg-white" id="faxian">
+	<div class="content">
+     	<table class="my-found" border="0" id="my-found">
+     	  <tr>
+     	  	<td class="mytouch">
+     	    <img src="../../images/find-page-images/1.png" alt="" />
+     	    <p> 机票</p>
+     	  	</td>
+     	  	
+     	  	<td class="mytouch"> 
+     	    <img src="../../images/find-page-images/2.png" alt="" />
+     	    <p> 火车票</p>
+     	  	</td>
+     	  	
+     	  	<td class="mytouch">
+     	    <img src="../../images/find-page-images/3.png" alt="" />
+     	    <p> 汽车票</p>
+     	  	</td>
+     	  </tr>
+     	  <tr>
+     	  	<td class="mytouch">
+     	    <img src="../../images/find-page-images/4.png" alt="" />
+     	    <p> 景点门票</p>
+     	  	</td>
+     	  	
+     	  	<td class="mytouch">
+     	    <img src="../../images/find-page-images/5.png" alt="" />
+     	    <p> 订酒店</p>
+     	  	</td>
+     	  	
+     	  	<td class="mytouch">
+     	    <img src="../../images/find-page-images/6.png" alt="" />
+     	    <p> 查天气</p>
+     	  	</td>
+     	  </tr>
+     	  <tr>
+     	  	<td class="mytouch">
+     	    <img src="../../images/find-page-images/7.png" alt="" />
+     	    <p> 地铁</p>
+     	  	</td>
+     	  	
+     	  	<td class="mytouch">
+     	    <img src="../../images/find-page-images/8.png" alt="" />
+     	    <p> 打车</p>
+     	  	</td>
+     	  	
+     	  	<td class="mytouch">
+     	    <img src="../../images/find-page-images/9.png" alt="" />
+     	    <p> 电影婚纱</p>
+     	  	</td>
+     	  </tr>
+     	</table>
+		<nav class="bar bar-tab fixed mybar"><a class="tab-item external" id="nav-shouye"> <span class="icon iconfont icon-shouye"></span> <span class="tab-label">首页</span> </a> <a class="tab-item external" id="nav-shangcheng"> <span class="icon iconfont icon-shangcheng1"></span> <span class="tab-label">商城</span> </a> <a class="tab-item external" id="nav-goupiao"> <span class="icon iconfont icon-goupiao1"></span> <span class="tab-label">购票</span> </a> <a class="tab-item external active" id="nav-faxian"> <span class="icon iconfont icon-faxian1 icon-faxian-tianchong"></span> <span class="tab-label">发现</span> </a><a class="tab-item external me color-f60 islogin" id="nav-wode"> <span class="icon iconfont icon-wode1"></span> <span class="tab-label">我的</span> </a> </nav>    	
+	</div>
+	</div>
+<script type='text/javascript' src='../../js/jquery-2.2.1.min.js' charset='utf-8'></script> 
+<script type='text/javascript' src='../../js/light7.min.js' charset='utf-8'></script> 
+<script type='text/javascript' src='../../js/hprose.js' charset='utf-8'></script>
+<script type='text/javascript' src='../../js/jiaohu.js?v=20170310' charset='utf-8'></script>
+<script type="text/javascript">
+	//链接
+     console.log();
+     link1 = document.getElementById("my-found").childNodes[1].children[0].children;
+     link2 = document.getElementById("my-found").childNodes[1].children[1].children;
+     link3 = document.getElementById("my-found").childNodes[1].children[2].children;
+    link1[0].onclick = function(){
+    	window.location.href = "http://dynamic.m.tuniu.com/m2015/flight/index";
+    }
+    link1[1].onclick = function(){
+    	window.location.href = "http://dynamic.m.tuniu.com/train";
+    }
+    link1[2].onclick = function(){
+    	window.location.href = "http://alifuwu.hezuo.changtu.com/";
+    }
+    link2[0].onclick = function(){
+    	window.location.href = "http://m.tuniu.com/m2015/mpChannel/index";
+    }
+    link2[1].onclick = function(){
+    	window.location.href = "http://m.tuniu.com/hotel";
+    }
+    link2[2].onclick = function(){
+    	window.location.href = "http://weather.html5.qq.com/";
+    }
+    link3[0].onclick = function(){
+    	window.location.href = "http://webmetro.itouchchina.com/citylist.php";
+    }
+    link3[1].onclick = function(){
+    	window.location.href = "http://taxi.map.baidu.com/";
+    }
+    link3[2].onclick = function(){
+    	window.location.href = "/templets/faxian/hunsha.html";
+    }
+    
+</script>
+</body>
+</html>

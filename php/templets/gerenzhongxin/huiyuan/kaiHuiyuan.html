@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>开通会员</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no" />
+<link rel="stylesheet" href="/css/light7.min.css">
+<link rel="stylesheet" href="/css/zg.css">
+<link rel="stylesheet" href="/css/iconfont.css">
+<script type='text/javascript' src='/js/jquery-2.2.1.min.js' charset='utf-8'></script> 
+<script type='text/javascript' src='/js/light7.min.js' charset='utf-8'></script> 
+<script type="text/javascript" src="http://m.fuqian.la/jssdk/h5jssdk.3.0.js?_t=201610251604" charset="utf-8"></script>
+<script type='text/javascript' src='https://res.wx.qq.com/open/js/jweixin-1.0.0.js'></script>
+<style>
+	#huiyuanlogo{
+	  width: 4rem;
+	  left: auto;
+	  right: 0;
+	}
+	.khy-tx{
+		width: 3rem;
+		height: 3rem;
+		border-radius:50% ;
+		margin-top: -0.25rem;
+		border: 2px solid #f5f5f5;
+		padding: 0;		
+	}
+	#khy-touxiang{
+		height: 100%;
+		width: 100%;
+		border-radius:50%;
+	}
+	.tiaokuan-tiaozhuan{
+		margin-top: 0.3rem;
+	}
+	
+</style>
+</head>
+<body>
+<div class="page" id="kaiHuiyuan">
+	<nav class="bar bar-tab fixed mybar"><a class="tab-item external" id="nav-shouye"> <span class="icon iconfont icon-shouye"></span> <span class="tab-label">首页</span> </a> <a class="tab-item external" id="nav-shangcheng"> <span class="icon iconfont icon-shangcheng1"></span> <span class="tab-label">商城</span> </a> <a class="tab-item external" id="nav-goupiao"> <span class="icon iconfont icon-goupiao1"></span> <span class="tab-label">购票</span> </a> <a class="tab-item external" id="nav-faxian"> <span class="icon iconfont icon-faxian1"></span> <span class="tab-label">发现</span> </a><a class="tab-item external active color-f60" id="nav-wode"> <span class="icon iconfont icon-wode-tianchong"></span> <span class="tab-label">我的</span> </a> </nav>
+	<div class="content">
+			
+	<div class="user-box">
+			<div class="khy-tx">
+				<img id="khy-touxiang" src=""/>
+			</div>
+			<span id="khy-mobile"></span>
+	</div>
+	<div class="li-50 VIP">
+		<i class="iconfont icon-king"></i>
+		开通会员
+	</div>
+	<div class="li-white h-80 border-bottom VIP">
+		首批用户<span class="color-warning weight"><i class="iconfont icon-renminbi"></i>500</span>终生会员
+		<div id="kt-kaitong">
+			<span></span>
+			<span class="tiaokuan-tiaozhuan">会员服务协议 <i class="iconfont icon-yingdaicon10"></i></span>
+		</div>
+	</div>
+	<div id="kt-body">	
+		<div id="kt-body-in">
+			<span class="kt-body-b iconfont icon-zuoshang"></span>
+			<span class="kt-body-b iconfont icon-youshang"></span>
+			<span class="kt-body-b"><img src="/images/tequan.png"/></span>
+			<div class="tequan-list">
+				<div class="tq-title border-bottom-1">在线视频</div>
+					<li class="border-bottom-1">
+						<div class="tq-name">
+							<span class="iconfont icon-v"></span>
+							<span>注册会员</span>
+							<span class="iconfont icon-down tk-open"></span>
+						</div>
+						<div class="content-padded tq-text danhang">
+							成为七彩影业项目股东，收益红利！
+						</div>
+					</li>
+					<li class="border-bottom-1">
+						<div class="tq-name">
+							<span class="iconfont icon-v"></span>
+							<span>会员免广告</span>
+							<span class="iconfont icon-down tk-open"></span>
+						</div>
+						<div class="content-padded tq-text danhang">
+							无需等待广告，立即观看视频，全程无干扰！
+						</div>
+					</li>
+					<li class="border-bottom-1">
+						<div class="tq-name">
+							<span class="iconfont icon-v"></span>
+							<span>会员宽带加速</span>
+							<span class="iconfont icon-down tk-open"></span>
+						</div>
+						<div class="content-padded tq-text danhang">
+							每次观看为您智能提速 100%，超清视频坚实保障。
+						</div>
+					</li>
+					<li class="border-bottom-1">
+						<div class="tq-name">
+							<span class="iconfont icon-v"></span>
+							<span>会员免费片库</span>
+							<span class="iconfont icon-down tk-open"></span>
+						</div>
+						<div class="content-padded tq-text danhang">
+							千部影片免费看，持续高速更新！
+						</div>
+					</li>
+					<li class="border-bottom-1">
+						<div class="tq-name">
+							<span class="iconfont icon-v"></span>
+							<span>1080P超高清</span>
+							<span class="iconfont icon-down tk-open"></span>
+						</div>
+						<div class="content-padded tq-text danhang">
+							全站1080P画质影片免费观看，享受影院级视听盛宴！
+						</div>
+					</li>
+					<li class="border-bottom-1">
+						<div class="tq-name">
+							<span class="iconfont icon-v"></span>
+							<span>自制剧抢先看</span>
+							<span class="iconfont icon-down tk-open"></span>
+						</div>
+						<div class="content-padded tq-text danhang">
+							最牛原创专为会员定制。
+						</div>
+					</li>
+					<li class="border-bottom-1">
+						<div class="tq-name">
+							<span class="iconfont icon-v"></span>
+							<span>直播观看</span>
+							<span class="iconfont icon-down tk-open"></span>
+						</div>
+						<div class="content-padded tq-text danhang">
+							百场演唱会直播，随时随地享受360度直播特权！
+						</div>
+					</li>
+					
+					<div class="fenge">
+						
+					</div>
+			</div>
+			<div class="tequan-list">
+				<div class="tq-title border-bottom-1">积分商城</div>
+					<li class="border-bottom-1">
+						<div class="tq-name">
+							<span class="iconfont icon-v"></span>
+							<span>等级加速</span>
+							<span class="iconfont icon-down tk-open"></span>
+						</div>
+						<div class="content-padded tq-text danhang">
+							更多活跃 ，等级成长更快！
+						</div>
+					</li>
+					<li class="border-bottom-1">
+						<div class="tq-name">
+							<span class="iconfont icon-v"></span>
+							<span>会员推荐</span>
+							<span class="iconfont icon-down tk-open"></span>
+						</div>
+						<div class="content-padded tq-text danhang">
+							会员推荐分享回报收益积分！
+						</div>
+					</li>
+					<div class="fenge"></div>
+			</div>
+			<div class="tequan-list">
+				<div class="tq-title border-bottom-1">线下影院</div>
+					<li class="border-bottom-1">
+						<div class="tq-name">
+							<span class="iconfont icon-v"></span>
+							<span>互动特权</span>
+							<span class="iconfont icon-down tk-open"></span>
+						</div>
+						<div class="content-padded tq-text danhang">
+								有机会客串公司投拍的影视作品<br/>
+								有机会参与剧组探班<br/>
+								有机会参观七彩影视拍摄基地<br/>
+								有机会参加首映礼、粉丝见面会<br/>
+								有机会参加年终明星酒会<br/>
+								有机会免费入住七彩影视主题酒店<br/>
+						</div>
+					</li>
+					<div class="fenge"></div>
+			</div>
+			<div class="tequan-list">
+				<div class="tq-title border-bottom-1">生活服务</div>
+					<li class="border-bottom-1">
+						<div class="tq-name">
+							<span class="iconfont icon-v"></span>
+							<span>1对1专属客服</span>
+							<span class="iconfont icon-down tk-open"></span>
+						</div>
+						<div class="content-padded tq-text danhang">
+							一键连接专属客服 全程只为您服务
+						</div>
+					</li>
+					<li class="border-bottom-1">
+						<div class="tq-name">
+							<span class="iconfont icon-v"></span>
+							<span>全天候在线反馈通道</span>
+							<span class="iconfont icon-down tk-open"></span>
+						</div>
+						<div class="content-padded tq-text danhang">
+							随时倾听您的心声，竭力满足您的需求
+						</div>
+					</li>
+			</div>
+		</div>
+		<div class="kt-foot">更多权益逐步增加，后续惊喜更给力！</div>		
+	</div>
+	</div>
+</div>
+<script type='text/javascript' src='/js/hprose.js' charset='utf-8'></script> 
+<script type='text/javascript' src='/js/jiaohu.js?v=20170403' charset='utf-8'></script>
+</body>
+</html>

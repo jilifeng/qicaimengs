@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>七彩梦视频</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="../../../css/light7.min.css">
+<link rel="stylesheet" href="../../../css/light7-swiper.min.css">
+<link rel="stylesheet" href="../../../css/iconfont.css">
+<link rel="stylesheet" href="../../../css/zg.css?v=20170320">
+<script type='text/javascript' src='../../../js/jweixin-1.0.0.js'></script>
+</head>
+<body>
+<div class="page scroll bg-f5" id="shouye">
+	<nav class="bar bar-tab fixed mybar"><a class="tab-item external active" id="nav-shouye"> <span class="icon iconfont icon-shouye icon-shouye-tianchong"></span> <span class="tab-label">首页</span> </a> <a class="tab-item external" id="nav-shangcheng"> <span class="icon iconfont icon-shangcheng1"></span> <span class="tab-label">商城</span> </a> <a class="tab-item external" id="nav-goupiao"> <span class="icon iconfont icon-goupiao1"></span> <span class="tab-label">购票</span> </a> <a class="tab-item external" id="nav-faxian"> <span class="icon iconfont icon-faxian1"></span> <span class="tab-label">发现</span> </a><a class="tab-item external me color-f60 islogin" id="nav-wode"> <span class="icon iconfont icon-wode1"></span> <span class="tab-label">我的</span> </a> </nav>
+    <div class="content" id="shouye-content">
+		<div class="shouyelogo">
+			<img src="/images/l-logo.png" alt="" />
+			<span>
+				<a href="/plus/list.php?tid=9" class="external shouye-a4"><i class="iconfont icon-sousuo1 " id="sousuo-page" ></i></a>
+				<a class="external shouye-a4" id="syxiaoxi-page"><i class="iconfont icon-duihuakuang"></i></a>
+				<a class="external shouye-a4" id="syjilu-page"><i class="iconfont icon-bofang"></i></a>
+			</span>
+		</div>
+
+	  <!--轮播图-->
+	
+		<div class="swiper-container" data-space-between='10' data-pagination='.swiper-pagination' data-autoplay="2000" style="width: 100%;">
+	       <div class="swiper-wrapper" id="swiper-wrapper">
+	       	{dede:arclist  typeid='1' row='6' orderby='sortrank'}
+	         <div class="swiper-slide"><a href="[field:arcurl/]" class="external"><img src="[field:litpic/]" alt=""></a></div>
+	       	{/dede:arclist}
+	       </div>
+	       <div class="swiper-pagination fu-margin"></div>
+	  </div>
+	  <div class="sy-content ">
+	  	<div class="content-top">
+	  		<span>至尊独享 <i class="iconfont icon-huangguan"></i></span><a class="external" href="http://v.7cai.tv/a/zhizunduxiang.html"><span> 查看更多<i class="iconfont icon-yingdaicon10"></i></span></a>
+	  	</div>
+	  	{dede:arclist flag="a" typeid='8' row='1' orderby='sortrank'}
+	  	<a href="[field:arcurl/]" class="external"><img src="[field:litpic/]" alt=""></a>
+	  	<div class="content-bottom" style="padding-bottom: .2rem;">
+	  		<h4>[field:title/]</h4>
+	  		<p>[field:shorttitle/]</p>
+	  	</div>
+	  	{/dede:arclist}
+	  </div>
+	  <!--热映大片-->
+	  <div class="sy-content">
+	  	<div class="content-top">
+	  		<span>热映大片 <i class="iconfont icon-bofang2"></i></span><span></span>
+	  	</div>
+	  	<div class="content-body">
+	  		{dede:arclist flag="h" typeid='8' row='4' orderby='sortrank'}
+	  		<div class="item">
+	  			<a href="[field:arcurl/]" class="external"><img src="[field:litpic/]" alt=""></a>
+	  			<div class="content-bottom">
+	  		      <h4>[field:title/]</h4>
+	  		      <p>[field:shorttitle/]</p>
+	  	        </div>
+	  		</div>
+	  		{/dede:arclist}
+	  	</div>
+	  	<div class="lookmore2"><a class="external color-gengduo" href="http://v.7cai.tv/plus/list.php?tid=8"> 查看更多 <i class="iconfont icon-yingdaicon10"></i></a></div>
+	  </div>
+
+	  <!-- 院线热映-->
+	  <div class="sy-content">
+	  	<div class="content-top">
+	  		<span>院线热映 <i class="iconfont icon-bofang2"></i></span><span></span>
+	  	</div>
+	  	<div class="content-body">
+	  		{dede:arclist flag="f" typeid='8' row='4' orderby='sortrank'}
+	  		<div class="item">
+	  			<a href="[field:arcurl/]" class="external"><img src="[field:litpic/]" alt=""></a>
+	  			<div class="content-bottom">
+	  		      <h4>[field:title/]</h4>
+	  		      <p>[field:shorttitle/]</p>
+	  	        </div>
+	  		</div>
+	  		{/dede:arclist}
+	  		
+	  	</div>
+	  	<div class="lookmore2"><a class="external color-gengduo" href="http://v.7cai.tv/plus/list.php?tid=8"> 查看更多 <i class="iconfont icon-yingdaicon10"></i></a></div>
+	  </div>
+
+	  <!--网络电影-->
+	  <div class="sy-content">
+	  	<div class="content-top">
+	  		<span>网络电影 <i class="iconfont icon-bofang2"></i></span><span></span>
+	  	</div>
+	  	<div class="content-body">
+	  		{dede:arclist flag="s" typeid='8' row='4' orderby='sortrank'}
+	  		<div class="item">
+	  			<a href="[field:arcurl/]" class="external"><img src="[field:litpic/]" alt=""></a>
+	  			<div class="content-bottom">
+	  		      <h4>[field:title/]</h4>
+	  		      <p>[field:shorttitle/]</p>
+	  	        </div>
+	  		</div>
+	  		{/dede:arclist}
+	  		
+	  	</div>
+	  	<div class="lookmore2"><a class="external color-gengduo" href="http://v.7cai.tv/plus/list.php?tid=8"> 查看更多 <i class="iconfont icon-yingdaicon10"></i></a></div>
+	  </div>
+
+	  <!-- 咨询预告-->
+	  <div class="sy-content">
+	  	<div class="content-top">
+	  		<span>资讯预告 <i class="iconfont icon-bofang2"></i></span><span></span>
+	  	</div>
+	  	<div class="content-body">
+	  		{dede:arclist  typeid='10' row='4' orderby='sortrank'}
+	  		<div class="item">
+	  			<a href="[field:arcurl/]" class="external"><img src="[field:litpic/]" alt=""></a>
+					<!--<div class="howlongtime">
+						03:30  
+					</div>-->
+	  			<div class="content-bottom">
+	  		      <h4>[field:title/]</h4>
+	  		      <p>[field:shorttitle/]</p>
+	  	        </div>
+	  		</div>
+	  		{/dede:arclist}
+	  	</div>
+	  	<div class="lookmore2"><a class="external color-gengduo" href="http://v.7cai.tv/plus/list.php?tid=8"> 查看更多 <i class="iconfont icon-yingdaicon10"></i></a></div>
+	  </div>
+
+	  <!--底部logo-->
+	     <div class="buttom-logo">
+	     	<img src="/images/dibulogo.png" alt="" />
+	     </div>
+</div>
+</div>
+<script type='text/javascript' src='../../../js/jquery-2.2.1.min.js' charset='utf-8'></script> 
+<script type='text/javascript' src='../../../js/light7.min.js' charset='utf-8'></script> 
+<script type='text/javascript' src='../../../js/hprose.js' charset='utf-8'></script> 
+<script type='text/javascript' src='../../../js/light7-swiper.min.js' charset='utf-8' async="async"></script>
+<script type='text/javascript' src='../../../js/jiaohu.js?v=20170328' charset='utf-8' async="async"></script>
+</body>
+</html>

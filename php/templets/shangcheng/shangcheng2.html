@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>积分商城</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="../../css/light7.min.css">
+<link rel="stylesheet" href="../../css/light7-swiper.min.css">
+<link rel="stylesheet" href="../../css/wj-1.css">
+<link rel="stylesheet" href="../../css/zg.css?v=20170308">
+<link rel="stylesheet" href="../../css/iconfont.css">
+<script type='text/javascript' src='https://res.wx.qq.com/open/js/jweixin-1.0.0.js'></script>
+<style type="text/css">
+	@media screen and (max-width: 320px) {
+    html{
+        font-size: 15px!important;
+    }
+   	nav a{
+   		transform: scale(1.1);
+   	}
+    }
+    img{
+    	border: 1px solid #d9d9d9;
+    }
+    .iMall_list{
+    	padding-left: .2rem;
+    }
+    .swiper-pagination-bullet{
+    	background-color: white;
+    }
+    *{
+    	font-family: "微软雅黑";
+    }
+      .suofang{
+    	bottom:2rem!important;
+    	transform: scale(0.8);
+    }
+        .dianyingzhoubian_new{
+    	font-size:.85rem!important;
+    }
+      .icon-dianyingzhoubian{
+    	color:#ed4518;
+    }
+      .kongfu_x{
+    	font-size:0.7rem;
+    }
+    .kongfu_jiage{
+    	font-size:0.6rem;
+    }
+      .yanse_bian{
+    	color:#ba927e;
+    }
+     .kongfu_jiagen{
+    	font-size:0.6rem;
+    	margin-top:0!important;
+    }
+       .yanse_bian{
+    	color:#ba927e;
+    }
+    .zi_tiniu{
+    	color:#ed4518;font-size:1rem;
+    }
+    .ziti_fen{
+    	color:#ed4518;
+    }
+</style>
+</head>
+<body>
+<div class="page" id="shangcheng">
+	<nav class="bar bar-tab fixed mybar"><a class="tab-item external" id="nav-shouye"> <span class="icon iconfont icon-shouye"></span> <span class="tab-label">首页</span> </a> <a class="tab-item external active" id="nav-shangcheng"> <span class="icon iconfont icon-shangcheng1 icon-shangcheng-tianchong"></span> <span class="tab-label">商城</span> </a> <a class="tab-item external" id="nav-goupiao"> <span class="icon iconfont icon-goupiao1"></span> <span class="tab-label">购票</span> </a> <a class="tab-item external" id="nav-faxian"> <span class="icon iconfont icon-faxian1"></span> <span class="tab-label">发现</span> </a><a class="tab-item external me color-f60" id="nav-wode"><span class="icon iconfont icon-wode1"></span> <span class="tab-label">我的</span> </a> </nav>
+	<div class="content iMall_content">
+		<div class="swiper-container" data-space-between='10' data-pagination='.swiper-pagination' data-autoplay="2000">
+	    <!-- Additional required wrapper -->
+		    <div class="swiper-wrapper">
+		        <!-- Slides -->
+		        <div class="swiper-slide shangcheng-lunbo"><img src="../../images/ji-lunbo1.png" alt="" /></div>
+		        <div class="swiper-slide shangcheng-lunbo"><img src="../../images/ji-lunbo2.png" alt="" /></div>
+		        <div class="swiper-slide shangcheng-lunbo"><img src="../../images/ji-lunbo3.png" alt="" /></div>
+		 		<div class="swiper-slide shangcheng-lunbo"><img src="../../images/ji-lunbo4.png" alt="" /></div>
+		    </div>
+			<div class="swiper-pagination  suofang"></div>
+		</div>
+        <div class="iMall_title">
+        	<span class="dianyingzhoubian_new">电影周边</span>
+            <span class="iconfont icon-dianyingzhoubian"></span>
+        </div>
+        <div class="iMall_list">
+        	<ul>
+                <li>
+                	<div class="iMall_list_img">
+                		<div class="iMall_list_pictice">
+                			<img src="../../images/ji-sc-images/未标题-1.png" alt="" />
+                		</div>	
+                	</div>
+                    <p class="kongfu_x">功夫熊猫公仔</p>
+                    <p class="kongfu_jiage">价格:<span class="yanse_bian">¥29</span></p>
+                    <p class="kongfu_jiagen">积分：<span class="kongfu_jiagen">580</span><span class="ziti_fen">分</span></p>
+                </li>
+                <li>
+                	<div class="iMall_list_img">
+                		<div class="iMall_list_pictice">
+                			<img src="../../images/ji-sc-images/2.png" alt="" style="padding-right: 0.2rem;padding-bottom: 0.2rem;"/>
+                		</div>	
+                	</div>
+                    <p class="kongfu_x">POP公仔 鹰眼</p>
+                    <p class="kongfu_jiage">价格:<span class="yanse_bian">¥59</span></p>
+                    <p class="kongfu_jiagen">积分：<span class="kongfu_jiagen">1180</span><span class="ziti_fen">分</span></p>
+                </li>
+               <li>
+                	<div class="iMall_list_img">
+                		<div class="iMall_list_pictice">
+                			<img src="../../images/ji-sc-images/3.png" alt="" />
+                		</div>	
+                	</div>
+                    <p class="kongfu_x">魔兽POLO衫</p>
+                    <p class="kongfu_jiage">价格:<span class="yanse_bian">¥199</span></p> 
+                     <p class="kongfu_jiagen">积分：<span class="kongfu_jiagen">3980</span><span class="ziti_fen">分</span></p>
+                	<div class="iMall_list_img">
+                		<div class="iMall_list_pictice">
+                			<img src="../../images/ji-sc-images/4.png" alt="" />
+                		</div>	
+                	</div>
+                    <p class="kongfu_x">火钟夜光卫衣</p>
+                    <p class="kongfu_jiage">价格:<span class="yanse_bian">¥159</span></p>
+                    <p class="kongfu_jiagen">积分：<span class="kongfu_jiagen">3180</span><span class="ziti_fen">分</span></p>
+                </li>
+                <li>
+                	<div class="iMall_list_img">
+                		<div class="iMall_list_pictice">
+                			<img src="../../images/ji-sc-images/5.png" alt="" />
+                		</div>	
+                	</div>
+                    <p class="kongfu_x">烫金运动卫衣</p>
+                    <p class="kongfu_jiage">价格:<span class="yanse_bian">¥159</span></p>
+                    <p class="kongfu_jiagen">积分：<span class="kongfu_jiagen">3180</span><span class="ziti_fen">分</span></p>
+                </li>
+                <li>
+                	<div class="iMall_list_img">
+                		<div class="iMall_list_pictice">
+                			<img src="../../images/ji-sc-images/6.png" alt="" />
+                		</div>	
+                	</div>
+                    <p class="kongfu_x">功夫熊猫存钱罐</p>
+                    <p class="kongfu_jiage">价格:<span class="yanse_bian">¥49</span></p>
+                    <p class="kongfu_jiagen">积分：<span class="kongfu_jiagen">760</span><span class="ziti_fen">分</span></p>
+                </li>
+                <li>
+                	<div class="iMall_list_img">
+                		<div class="iMall_list_pictice">
+                			<img src="../../images/ji-sc-images/7.png" alt="" />
+                		</div>	
+                	</div>
+                    <p class="kongfu_x">魔兽充电底座</p>
+                    <p class="kongfu_jiage">价格:<span class="yanse_bian">¥59</span></p>
+                    <p class="kongfu_jiagen">积分：<span class="kongfu_jiagen">9980</span><span class="ziti_fen">分</span></p>
+                </li>
+                <li>
+                	<div class="iMall_list_img">
+                		<div class="iMall_list_pictice">
+                			<img src="../../images/ji-sc-images/8.png" alt="" />
+                		</div>	
+                	</div>
+                    <p class="kongfu_x">魔兽世界充电宝</p>
+                    <p class="kongfu_jiage">价格:<span class="yanse_bian">¥399</span></p>
+                    <p class="kongfu_jiagen">积分：<span class="kongfu_jiagen">7980</span><span class="ziti_fen">分</span></p>
+                </li>
+               <li>
+                	<div class="iMall_list_img">
+                		<div class="iMall_list_pictice">
+                			<img src="../../images/ji-sc-images/9.png" alt="" />
+                		</div>	
+                	</div>
+                    <p class="kongfu_x">魔兽世界充电宝</p>
+                    <p class="kongfu_jiage">价格:<span class="yanse_bian">¥499</span></p>
+                    <p class="kongfu_jiagen">积分：<span class="kongfu_jiagen">9980</span><span class="ziti_fen">分</span></p>
+                </li>
+                 <li>
+                	<div class="iMall_list_img">
+                		<div class="iMall_list_pictice">
+                			<img src="../../images/ji-sc-images/10.png" alt="" />
+                		</div>	
+                	</div>
+                    <p class="kongfu_x">魔兽世界充电宝</p>
+                    <p class="kongfu_jiage">价格:<span class="yanse_bian">¥599</span></p>
+                    <p class="kongfu_jiagen">积分：<span class="kongfu_jiagen">11980</span><span class="ziti_fen">分</span></p>
+                </li>
+                  <li>
+                	<div class="iMall_list_img">
+                		<div class="iMall_list_pictice">
+                			<img src="../../images/ji-sc-images/11.png" alt="" />
+                		</div>	
+                	</div>
+                    <p class="kongfu_x">魔兽阵营雨伞</p>
+                    <p class="kongfu_jiage">价格:<span class="yanse_bian">¥120</span></p>
+                    <p class="kongfu_jiagen">积分：<span class="kongfu_jiagen">2400</span><span class="ziti_fen">分</span></p>
+                </li>
+                  <li>
+                	<div class="iMall_list_img">
+                		<div class="iMall_list_pictice">
+                			<img src="../../images/ji-sc-images/12.png" alt="" />
+                		</div>	
+                	</div>
+                    <p class="kongfu_x">魔兽世界笔记本</p>
+                    <p class="kongfu_jiage">价格:<span class="yanse_bian">¥399</span></p>
+                    <p class="kongfu_jiagen">积分：<span class="kongfu_jiagen">960</span><span class="ziti_fen">分</span></p>
+                </li>
+                  <li>
+                	<div class="iMall_list_img">
+                		<div class="iMall_list_pictice">
+                			<img src="../../images/ji-sc-images/13.png" alt="" />
+                		</div>	
+                	</div>
+                    <p class="kongfu_x">哆啦A梦数据线</p>
+                    <p class="kongfu_jiage">价格:<span class="yanse_bian">¥29</span></p>
+                    <p class="kongfu_jiagen">积分：<span class="kongfu_jiagen">760</span><span class="ziti_fen">分</span></p>
+                </li>
+                  <li>
+                	<div class="iMall_list_img">
+                		<div class="iMall_list_pictice">
+                			<img src="../../images/ji-sc-images/14.png" alt="" />
+                		</div>	
+                	</div>
+                    <p class="kongfu_x">哆啦A梦手机架</p>
+                    <p class="kongfu_jiage">价格:<span class="yanse_bian">¥65</span></p>
+                    <p class="kongfu_jiagen">积分：<span class="kongfu_jiagen">1300</span><span class="ziti_fen">分</span></p>
+                </li>
+                 <li>
+                	<div class="iMall_list_img">
+                		<div class="iMall_list_pictice">
+                			<img src="../../images/ji-sc-images/15.png" alt="" />
+                		</div>	
+                	</div>
+                    <p class="kongfu_x">功夫熊猫手机架</p>
+                    <p class="kongfu_jiage">价格:<span class="yanse_bian">¥19</span></p>
+                    <p class="kongfu_jiagen">积分：<span class="kongfu_jiagen">380</span><span class="ziti_fen">分</span></p>
+                </li>
+                  <li>
+                	<div class="iMall_list_img">
+                		<div class="iMall_list_pictice">
+                			<img src="../../images/ji-sc-images/16.png" alt="" />
+                		</div>	
+                	</div>
+                    <p class="kongfu_x">功夫熊猫3D眼镜</p>
+                    <p class="kongfu_jiage">价格:<span class="yanse_bian">¥19</span></p>
+                    <p class="kongfu_jiagen">积分：<span class="kongfu_jiagen">560</span><span class="ziti_fen">分</span></p>
+                </li>
+                 
+                  <li>
+                	<div class="iMall_list_img">
+                		<div class="iMall_list_pictice">
+                			<img src="../../images/ji-sc-images/17.png" alt="" />
+                		</div>	
+                	</div>
+                    <p class="kongfu_x">魔兽世界3D眼镜</p>
+                    <p class="kongfu_jiage">价格:<span class="yanse_bian">¥28</span></p>
+                    <p class="kongfu_jiagen">积分：<span class="kongfu_jiagen">560</span><span class="ziti_fen">分</span></p>
+                </li>
+                  <li>
+                	<div class="iMall_list_img">
+                		<div class="iMall_list_pictice">
+                			<img src="../../images/ji-sc-images/18.png" alt="" />
+                		</div>	
+                	</div>
+                    <p class="kongfu_x">魔兽车贴</p>
+                    <p class="kongfu_jiage">价格:<span class="yanse_bian">¥28</span></p>
+                    <p class="kongfu_jiagen">积分：<span class="kongfu_jiagen">560</span><span class="ziti_fen">分</span></p>
+                </li>
+                  <li>
+                	<div class="iMall_list_img">
+                		<div class="iMall_list_pictice">
+                			<img src="../../images/ji-sc-images/19.png" alt="" />
+                		</div>	
+                	</div>
+                    <p class="kongfu_x">伊利丹颈枕套装</p>
+                    <p class="kongfu_jiage">价格:<span class="yanse_bian">¥29</span></p>
+                    <p class="kongfu_jiagen">积分：<span class="kongfu_jiagen">580</span><span class="ziti_fen">分</span></p>
+                </li>
+                  <li>
+                	<div class="iMall_list_img">
+                		<div class="iMall_list_pictice">
+                			<img src="../../images/ji-sc-images/20.png" alt="" />
+                		</div>	
+                	</div>
+                    <p class="kongfu_x">魔兽萨尔颈枕</p>
+                    <p class="kongfu_jiage">价格:<span class="yanse_bian">¥99</span></p>
+                    <p class="kongfu_jiagen">积分：<span class="kongfu_jiagen">1980</span><span class="ziti_fen">分</span></p>
+                </li>
+                  <li>
+                	<div class="iMall_list_img">
+                		<div class="iMall_list_pictice">
+                			<img src="../../images/ji-sc-images/21.png" alt="" />
+                		</div>	
+                	</div>
+                    <p class="kongfu_x">哆啦A梦 茶友</p>
+                    <p class="kongfu_jiage">价格:<span class="yanse_bian">¥38</span></p>
+                    <p class="kongfu_jiagen">积分：<span class="kongfu_jiagen">760</span><span class="ziti_fen">分</span></p>
+                </li>
+                  <li>
+                	<div class="iMall_list_img">
+                		<div class="iMall_list_pictice">
+                			<img src="../../images/ji-sc-images/22.png" alt="" />
+                		</div>	
+                	</div>
+                    <p class="kongfu_x">伊利丹钥匙扣</p>
+                    <p class="kongfu_jiage">价格:<span class="yanse_bian">¥79</span></p>
+                    <p class="kongfu_jiagen">积分：<span class="kongfu_jiagen">1580</span><span class="ziti_fen">分</span></p>
+                </li>
+                  <li>
+                	<div class="iMall_list_img">
+                		<div class="iMall_list_pictice">
+                			<img src="../../images/ji-sc-images/23.png" alt="" />
+                		</div>	
+                	</div>
+                    <p class="kongfu_x">星球大战手柄杯</p>
+                    <p class="kongfu_jiage">价格:<span class="yanse_bian">¥38</span></p>
+                    <p class="kongfu_jiagen">积分：<span class="kongfu_jiagen">760</span><span class="ziti_fen">分</span></p>
+                </li>
+                  <li>
+                	<div class="iMall_list_img">
+                		<div class="iMall_list_pictice">
+                			<img src="../../images/ji-sc-images/24.png" alt="" style="padding-right: .1rem;"/>
+                		</div>	
+                	</div>
+                    <p class="kongfu_x">银币 部落</p>
+                    <p class="kongfu_jiage">价格:<span class="yanse_bian">¥1499</span></p>
+                    <p class="kongfu_jiagen">积分：<span class="kongfu_jiagen">29980</span><span class="ziti_fen">分</span></p>
+                </li>
+                
+            </ul>
+        </div>
+        <!--<div class="iMall_more">
+        	<a>查看更多 ></a>
+        </div>-->   
+	</div>
+	
+</div>
+<script type='text/javascript' src='../../js/jquery-2.2.1.min.js' charset='utf-8'></script> 
+<script type='text/javascript' src='../../js/light7.min.js' charset='utf-8'></script> 
+<script type='text/javascript' src='../../js/light7-swiper.min.js' charset='utf-8'></script> 
+<script type='text/javascript' src='../../js/hprose.js' charset='utf-8'></script>
+<script type='text/javascript' src='../../js/jiaohu.js?v=20170310' charset='utf-8'></script>
+<script type="text/javascript">
+	$(".iMall_list ul li:nth-child(1)").on("click",function(){
+		window.location.href = "./sp1.html";
+	})
+	$(".iMall_list ul li:nth-child(2)").on("click",function(){
+		window.location.href = "./sp2.html";
+	})
+	$(".iMall_list ul li:nth-child(3)").on("click",function(){
+		window.location.href = "./sp3.html";
+	})
+	$(".iMall_list ul li:nth-child(4)").on("click",function(){
+		window.location.href = "./sp4.html";
+	})
+	$(".iMall_list ul li:nth-child(5)").on("click",function(){
+		window.location.href = "./sp5.html";
+	})
+	$(".iMall_list ul li:nth-child(6)").on("click",function(){
+		window.location.href = "./sp6.html";
+	})
+	$(".iMall_list ul li:nth-child(7)").on("click",function(){
+		window.location.href = "./sp7.html";
+	})
+	$(".iMall_list ul li:nth-child(8)").on("click",function(){
+		window.location.href = "./sp8.html";
+	})
+	$(".iMall_list ul li:nth-child(9)").on("click",function(){
+		window.location.href = "./sp9.html";
+	})
+	$(".iMall_list ul li:nth-child(10)").on("click",function(){
+		window.location.href = "./sp10.html";
+	})
+	$(".iMall_list ul li:nth-child(11)").on("click",function(){
+		window.location.href = "./sp11.html";
+	})
+	$(".iMall_list ul li:nth-child(12)").on("click",function(){
+		window.location.href = "./sp12.html";
+	})
+	$(".iMall_list ul li:nth-child(13)").on("click",function(){
+		window.location.href = "./sp13.html";
+	})
+	$(".iMall_list ul li:nth-child(14)").on("click",function(){
+		window.location.href = "./sp14.html";
+	})
+	$(".iMall_list ul li:nth-child(15)").on("click",function(){
+		window.location.href = "./sp15.html";
+	})
+	$(".iMall_list ul li:nth-child(16)").on("click",function(){
+		window.location.href = "./sp16.html";
+	})
+	$(".iMall_list ul li:nth-child(17)").on("click",function(){
+		window.location.href = "./sp17.html";
+	})
+	$(".iMall_list ul li:nth-child(18)").on("click",function(){
+		window.location.href = "./sp18.html";
+	})
+	$(".iMall_list ul li:nth-child(19)").on("click",function(){
+		window.location.href = "./sp19.html";
+	})
+	$(".iMall_list ul li:nth-child(20)").on("click",function(){
+		window.location.href = "./sp20.html";
+	})
+	$(".iMall_list ul li:nth-child(21)").on("click",function(){
+		window.location.href = "./sp21.html";
+	})
+	$(".iMall_list ul li:nth-child(22)").on("click",function(){
+		window.location.href = "./sp22.html";
+	})
+	$(".iMall_list ul li:nth-child(23)").on("click",function(){
+		window.location.href = "./sp23.html";
+	})
+	$(".iMall_list ul li:nth-child(24)").on("click",function(){
+		window.location.href = "./sp24.html";
+	})
+	$(".shangcheng-lunbo:nth-child(1)").on("click",function(){
+		window.location.href = "./sp7.html";
+	})
+	$(".shangcheng-lunbo:nth-child(2)").on("click",function(){
+		window.location.href = "./sp3.html";
+	})
+	$(".shangcheng-lunbo:nth-child(3)").on("click",function(){
+		window.location.href = "./sp2.html";
+	})
+	$(".shangcheng-lunbo:nth-child(4)").on("click",function(){
+		window.location.href = "./sp21.html";
+	})
+</script>
+</body>
+</html>

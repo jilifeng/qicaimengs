@@ -1,0 +1,47 @@
+<?php
+$z[0]=Array("global","",61,89);
+$z[0][4]['name']="cfg_soft_lang";
+$z[1]=Array("field","",102,121);
+$z[1][4]['name']="title";
+$z[2]=Array("global","",122,148);
+$z[2][4]['name']="cfg_webname";
+$z[3]=Array("include","",1563,1602);
+$z[3][4]['filename']="header_m.htm";
+$z[4]=Array("field","",1676,1705);
+$z[4][4]['name']="position";
+$z[5]=Array("field","",1832,1851);
+$z[5][4]['name']="title";
+$z[6]=Array("field","",1934,1990);
+$z[6][4]['name']="pubdate";
+$z[6][4]['function']="MyDate('Y-m-d H:i',@me)";
+$z[7]=Array("field","",2024,2044);
+$z[7][4]['name']="source";
+$z[8]=Array("field","",2079,2099);
+$z[8][4]['name']="writer";
+$z[9]=Array("field","",2147,2174);
+$z[9][4]['name']="phpurl";
+$z[10]=Array("field","",2198,2221);
+$z[10][4]['name']="id";
+$z[11]=Array("field","",2226,2250);
+$z[11][4]['name']="mid";
+$z[12]=Array("fieldlist","\r\n									<table width=\"100%\" border=\"0\" cellpadding=\"1\" cellspacing=\"1\" bgcolor=\"#BED1AB\">\r\n										<tr>\r\n											<td width=\"23%\" height=\"24\" align=\"center\" bgcolor=\"#FBFEF5\">	<b>[field:name/]</b> 内容：\r\n												<br />模板调用标记：\r\n												<br />\r\n												<script language='javascript'>\r\n													document.write(\"{\"+\"dede:field.[field:tagname/] /\"+\"}\");\r\n												</script>\r\n											</td>\r\n											<td width=\"77%\" bgcolor=\"#FFFFFF\">[field:value/]</td>\r\n										</tr>\r\n									</table>",2794,3359);
+$z[13]=Array("field","",3360,3378);
+$z[13][4]['name']="vote";
+$z[14]=Array("adminname","",3395,3412);
+$z[15]=Array("pagebreak","",3576,3593);
+$z[16]=Array("prenext","",3767,3792);
+$z[16][4]['get']="pre";
+$z[17]=Array("prenext","",3838,3864);
+$z[17][4]['get']="next";
+$z[18]=Array("arclist","\r\n							<li><a href=\"view.php?aid=[field:id/]\">[field:title/]</a>\r\n							</li>",4110,4257);
+$z[18][4]['row']="5";
+$z[18][4]['orderby']="pubdate";
+$z[18][4]['titlelen']="40";
+$z[19]=Array("arclist","\r\n							<li><a href=\"view.php?aid=[field:id/]\">[field:title/]</a>\r\n							</li>",4418,4561);
+$z[19][4]['row']="5";
+$z[19][4]['orderby']="hot";
+$z[19][4]['titlelen']="40";
+$z[20]=Array("include","",4616,4655);
+$z[20][4]['filename']="footer_m.htm";
+
+?>

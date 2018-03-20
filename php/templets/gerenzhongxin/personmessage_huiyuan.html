@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>个人中心</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no" />
+<link rel="stylesheet" href="../../css/light7.min.css">
+<link rel="stylesheet" href="../../css/zg.css?v=20170315">
+<link rel="stylesheet" href="../../css/iconfont.css?v=20170118">
+<script type='text/javascript' src='https://res.wx.qq.com/open/js/jweixin-1.0.0.js'></script>
+<style type="text/css">
+	.list-module{
+		padding-left: 0;margin-left: 1rem;
+	}
+	.p-white{
+		width: 100%;
+		background-color: white;
+	}
+	li{
+		height: 2.2rem !important;
+		line-height: 2.2rem  !important;
+		font-size: .7rem !important;
+	}
+	.hybg img{
+		width: 100%;
+		height: 110%;
+	}
+	.hybg{
+		position: relative;
+		background-color: #fef7ef;
+		height: 30%;
+	}
+	.hytequan{
+		height: 2.8rem;
+		line-height:2.8rem;
+		background-color: #fef7ef;
+		width: 100%;
+		font-size: 0.8rem;
+		padding-left: .8rem;
+		color: #ec4619;
+		font-weight: 500;
+		border-bottom: 1px solid #d9d9d9;
+	}
+		.hytequan i{
+			margin-right: .6rem;
+		}
+	.hybg-touxiang{
+		border-radius: 50%;
+		width: 23%;
+		position: absolute;
+		left: 50%;
+		margin-left: -11.5%;
+		top: 13%;
+	}
+	.hybg-touxiang i{
+		position: absolute;
+		font-size: 1.8rem;
+		color: #EC4619;
+		top: -1rem;
+		right: -0.3rem;
+	}
+	.hybg-touxiang img{
+		width: 100%;
+		border-radius:50%;
+		height: 100%;
+	}
+	.hybg-down-num{
+		position: absolute;
+		width: 100%;
+		padding-left: 29%;
+		bottom: .3rem;
+	}
+	.hybg-down-num span:nth-child(1){
+		font-size: .8rem;
+	}
+	.hybg-down-num span:nth-child(2){
+		display: inline-block;
+		color:#EC4619;
+		margin-left: .8rem;
+		font-size: .8rem;
+	}
+	.hybg-down-num i{
+		display: inline-block;
+		color: #EC4619;
+		float: right;
+		margin-right: 1rem;
+		font-size: 1rem;
+		margin-top: 0;
+	}
+	.zitide{
+		font-weight: bolder;
+	}
+</style>
+</head>
+<body>
+<div class="page" id="personmessage_huiyuan">
+	<nav class="bar bar-tab fixed mybar"><a class="tab-item external" id="nav-shouye"> <span class="icon iconfont icon-shouye"></span> <span class="tab-label">首页</span> </a> <a class="tab-item external" id="nav-shangcheng"> <span class="icon iconfont icon-shangcheng1"></span> <span class="tab-label">商城</span> </a> <a class="tab-item external" id="nav-goupiao"> <span class="icon iconfont icon-goupiao1"></span> <span class="tab-label">购票</span> </a> <a class="tab-item external" id="nav-faxian"> <span class="icon iconfont icon-faxian1"></span> <span class="tab-label">发现</span> </a><a class="tab-item external active color-f60" id="nav-wode"> <span class="icon iconfont icon-wode-tianchong"></span> <span class="tab-label">我的</span> </a> </nav>
+	<div class="content">
+     <div class="hybg mytouch" id="hy-edit">
+     		<img src="../../images/bg-vip.png"/>
+     		<div class="hybg-touxiang">
+     			<img src=""/>
+     			<i class="iconfont icon-huangguantouxiang"></i>
+     		</div>
+     	<div class="hybg-down-num"><span id="hui-mobile"></span> <span id="vip-jifen"></span><i class="iconfont icon-jiaofeihuiyuanbianji"></i></div>    	
+     </div>
+			  <div class="hytequan" id="hytq">
+			  	<i class="iconfont  icon-kaitonghuiyuan"></i>会员特权
+						<span class="right-icon"><i class="iconfont icon-yingdaicon10 weight"></i></span>
+			  </div>
+			<div class="fenge-2"></div>
+	<div class="person-mid">
+		<ul>
+			<div class="p-white mytouch" id="tuijian-page">
+			<li class="list-module">
+				<span><i class="iconfont icon-weibiaoti--copy icon-size"></i></span>
+				<span>推荐有礼</span>
+				<span class="right-icon"><i class="iconfont icon-yingdaicon10 weight"></i></span>
+			</li>
+			</div>
+			<div class="fenge-2"></div>
+			<div class="p-white mytouch" id="bfjl-page">
+			<li class="list-module">
+				<span><i class="iconfont icon-bofangjilu icon-size"></i></span>
+				<span>播放记录</span>
+				<span class="right-icon"><i class="iconfont icon-yingdaicon10 weight"></i></span>
+			</li>
+			</div>
+			<div class="p-white mytouch" id="spsc-page">
+			<li class="list-module">
+				<span><i class="iconfont icon-shipinshoucang icon-size"></i></span>
+				<span>视频收藏</span>
+				<span class="right-icon"><i class="iconfont icon-yingdaicon10 weight"></i></span>
+			</li>
+			</div>
+			<div class="fenge-2"></div>
+			<div class="p-white mytouch" id="wddyp-page">
+			<li class="list-module">
+				<span><i class="iconfont icon-wodedianyingpiao1 icon-size"></i></span>
+				<span>我的电影票</span>
+				<span class="right-icon"><i class="iconfont icon-yingdaicon10 weight"></i></span>
+			</li>
+			</div>
+			<div class="p-white mytouch" id="wdjf-page">
+			<li class="list-module">
+				<span class="zitide"><i class="iconfont icon-jifen icon-size"></i></span>
+				<span>我的积分</span>
+				<span class="right-icon"><i class="iconfont icon-yingdaicon10 weight"></i></span>
+			</li>
+			</div>
+			<div class="p-white mytouch" id="kajuan-page">
+			<li class="list-module">
+				<span><i class="iconfont icon-wodeqiaquan icon-size"></i></span>
+				<span>我的卡券</span>
+				<span class="right-icon"><i class="iconfont icon-yingdaicon10 weight"></i></span>
+			</li>
+			</div>
+			<div class="p-white mytouch" id="dingdan-page">
+			<li class="list-module">
+				<span><i class="iconfont icon-wodedingdan icon-size"></i></span>
+				<span>我的订单</span>
+				<span class="right-icon"><i class="iconfont icon-yingdaicon10 weight"></i></span>
+			</li>
+			</div>
+			<div class="fenge-2"></div>
+			<div class="p-white mytouch" id="xxzx-page">
+			<li class="list-module">
+				<div id="p-biaoqian">0</div>
+				<span><i class="iconfont icon-xiaoxizhongxin icon-size"></i></span>
+				<span>消息中心</span>
+				<span class="right-icon"><i class="iconfont icon-yingdaicon10 weight"></i></span>
+			</li>
+			</div>
+			<div class="p-white mytouch" id="yjfk-page">
+			<li class="list-module">
+				<span><i class="iconfont icon-yijianfankui icon-size"></i></span>
+				<span>意见反馈</span>
+				<span class="right-icon"><i class="iconfont icon-yingdaicon10 weight"></i></span>
+			</li>
+			</div>
+			<div class="p-white mytouch" id="shezhi-page">
+			<li class="list-module">
+				<span><i class="iconfont icon-shezhi1 icon-size"></i></span>
+				<span>设置</span>
+				<span class="right-icon"><i class="iconfont icon-yingdaicon10 weight"></i></span>
+			</li>
+			</div>
+			<div class="fenge-2"></div>
+		</ul>
+	</div>
+	
+	</div>
+</div>
+<script type='text/javascript' src='../../js/jquery-2.2.1.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='../../js/light7.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='../../js/hprose.js' charset='utf-8'></script>
+<script type='text/javascript' src='../../js/jiaohu.js?v=20170402' charset='utf-8'></script>
+</body>
+</html>

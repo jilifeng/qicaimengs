@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>找回密码</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="../../../css/light7.min.css">
+<link rel="stylesheet" href="../../../css/zg.css?v=20170117">
+<link rel="stylesheet" href="../../../css/iconfont.css">
+<script type='text/javascript' src='https://res.wx.qq.com/open/js/jweixin-1.0.0.js'></script>
+<style type="text/css">
+	#fasong p a{
+		margin-top: -0.7rem;
+	}
+</style>
+</head>
+<body>
+<div class="page" id="backpsword">
+	<div class="content">
+		
+		<div class="page-login no-margin">
+			<div class="list-block inset text-center registbody margin-04">
+				<ul>
+					<li>
+						<div class="item-content z-content-1 no-bordertop">
+							<div class="item-media"><i class="iconfont icon-person"></i></div>
+							<div class="item-inner" id="login-inner">
+								<div class="item-input">
+									<input name="mobile" id="bk-mobile" type="text" placeholder="输入手机号" autocomplete="off">
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item-content z-content-1 no-bordertop">
+							<div class="item-media"><i class="iconfont icon-jianpan"></i></div>
+								<div class="item-input default-ps">
+									<input name="code" id="bk-code" type="text" placeholder="输入验证码" />
+									<div id="fasong">
+											<p id="bk-huoqu"><a class="button button-big mybutton mybutton-re">获取验证码</a></p>
+											<p class="ds-none" id="bk-zaici"><a class="button button-big mybutton mybutton-re">重新发送</a></p>
+											<p class="ds-none" id="bk-yifa"><a class="button button-big mybutton mybutton-re">已发送(<span id="bk-sec">59</span>s)</a></p>
+									</div>
+								</div>
+						</div>
+					</li>
+					<li>
+						<div class="item-content z-content-1 no-bordertop" >
+							<div class="item-media"><i class="iconfont icon-shurumima"></i></div>
+							<div class="item-inner">
+								<div class="item-input">
+									<input name="newps" id="bk-newps" type="password" placeholder="输入新密码">
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div class="lg-error" id="bk-er">
+					
+				</div>
+			</div>
+
+			<div class="newbutton" id="bk-commit">完成</div>
+		</div>
+	</div>
+</div>
+<script type='text/javascript' src='../../../js/jquery-2.2.1.min.js' charset='utf-8'></script> 
+<script type='text/javascript' src='../../../js/light7.min.js' charset='utf-8'></script> 
+<script type='text/javascript' src='../../../js/hprose.js' charset='utf-8'></script> 
+<script type='text/javascript' src='../../../js/jiaohu.js?v=20170302' charset='utf-8'></script>
+</body>
+</html>

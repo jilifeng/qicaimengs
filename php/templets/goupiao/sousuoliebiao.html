@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>七彩梦视频</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+        <link rel="shortcut icon" href="/favicon.ico">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta content="yes" name="apple-touch-fullscreen">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/light7.min.css">
+        <link rel="stylesheet" href="../../css/zg.css?v=20170315">
+        <link rel="stylesheet" href="../../css/iconfont.css">
+        <script type='text/javascript' src='https://res.wx.qq.com/open/js/jweixin-1.0.0.js'></script>
+        <style type="text/css">
+        	.not-found-video{
+        		top:60%;
+        		display: none;
+        		background: #EFEFF4;
+        	}
+        	#ss-shanchu{
+        		display: block;
+        		position: absolute;
+        		color: #d9d9d9;
+        		top: .95rem;
+        		right: 3.3rem;
+        		display: none;
+        	}
+        	#sousuo-input{
+        		width: 72%;
+        		-webkit-appearance:none;
+        	}
+        	.clear-record{
+        		display: none;
+        	}
+        </style>
+	</head>
+	<body>
+	 <div class="page">
+		 <div class="content">
+		 	<form class="dy-sousuo">
+		     	<i class="iconfont icon-sousuo" id="lb-sousuo"></i>
+		     	<input type="search"  placeholder="请输入影片名" id="sousuo-input"/>
+		     	<i class="iconfont icon-shanchuzifu" id="ss-shanchu"></i>
+		     	 &nbsp;<span id="sousuo-quxiao">取消</span>   
+		     </form>
+		     <div class="not-found-video">
+		     	<i class="iconfont icon-shipinqueshen"></i>  
+		     	<p>没有找到相关视频</p> 
+		     </div>
+		     <div class="sousuo-list">
+		     	 <ul>
+		     	 </ul>
+		       <div class="clear-record" id="qingkongjilu">
+		     	 <i class="iconfont icon-shanchu"></i>清空历史记录
+		       </div>
+		     </div>
+		</div>    
+	</div>
+    <script type='text/javascript' src='../../js/jquery-2.2.1.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../js/light7.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../js/hprose.js' charset='utf-8'></script>
+	<script type="text/javascript">
+	function noscroll(){
+    	var content = document.querySelector('.content');
+		var startY;
+		
+		content.addEventListener('touchstart', function (e) {
+		    startY = e.touches[0].clientY;
+		});
+		
+		content.addEventListener('touchmove', function (e) {
+		    // 高位表示向上滚动
+		    // 底位表示向下滚动
+		    // 1容许 0禁止
+		    var status = '11';
+		    var ele = this;
+		
+		    var currentY = e.touches[0].clientY;
+		
+		    if (ele.scrollTop === 0) {
+		        // 如果内容小于容器则同时禁止上下滚动
+		        status = ele.offsetHeight >= ele.scrollHeight ? '00' : '01';
+		    } else if (ele.scrollTop + ele.offsetHeight >= ele.scrollHeight) {
+		        // 已经滚到底部了只能向上滚动
+		        status = '10';
+		    }
+		
+		    if (status != '11') {
+		        // 判断当前的滚动方向
+		        var direction = currentY - startY > 0 ? '10' : '01';
+		        // 操作方向和当前允许状态求与运算，运算结果为0，就说明不允许该方向滚动，则禁止默认事件，阻止滚动
+		        if (!(parseInt(status, 2) & parseInt(direction, 2))) {
+		            e.preventDefault();
+		        }
+		    }
+		});
+    }
+noscroll();
+		var cityidSure=window.localStorage.getItem('city_select1') || 10;
+		var client = hprose.Client.create("http://test.7cai.tv/index.php/api/api/ticket", ['getOrderLists','login', 'getCityMoviesLists2','getCityWillMoviesLists2','getCinemaSchedInfo','getTicketCinemaUrl','register','getTicketCinemaUrl', 'getCityCinemasLists', 'isLogin', 'logout','getCityMoviesLists','getCinemaInfo','getCinemaSchedInfo','getCityWillMoviesLists','findPwd','getMoviesInfo', 'sendCode', 'getUserInfo', 'getMoviesInfo','getAddressList', 'getUploadParams', 'getPayOrderInfo', 'getOpenId','getCityLists','getCityCinemasLists']);
+		client.getCityMoviesLists({"city_id":cityidSure},function(result)//正在上映
+		{		
+				$.hidePreloader();
+				var result=$.parseJSON(result);	
+				console.log(result.data);
+				console.log(result.data.info[6].actor);
+				var rdil=result.data.info.length;	
+				
+				var mJson=result.data.info;
+				console.log(mJson);
+		var u = navigator.userAgent;
+		var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+		if (isiOS){
+			//$(".not-found-video").css("top","36%");
+		}
+		/*var mJson=[
+			{dede:arclist typeid='8' row='100' orderby='pubdate'}
+				{"videoname":"[field:title/]","id":"[field:id/]"},
+			{/dede:arclist}			
+		];*/
+		$("#sousuo-input").bind('input propertychange',function(){
+				var name = $("#sousuo-input").val();
+				var find = 0;
+				$(".not-found-video").hide();
+				$("#ss-shanchu").show();
+				$("#sousuo-input").keydown(function(e){				
+					if(e.which === 13){
+						e.preventDefault();
+						$.each(mJson,function(a,b){
+						if(b.name.indexOf(name) != -1 && name && $(".movie-sousuo").text().indexOf(b.name) == -1){
+							$(".sousuo-list ul").append("<li><a class='external movie-sousuo' href='dyxiangqing.html?id="+b.id+"'>"+b.name+"</a></li>");
+							find = 1;
+							$("#qingkongjilu").show();
+						}
+					})
+					}
+				})
+				$("#ss-shanchu").click(function(){
+					$("#sousuo-input").val("");
+				})				
+				$.each(mJson,function(a,b){
+					if(b.name.indexOf(name) != -1 && name && $(".movie-sousuo").text().indexOf(b.name) == -1){
+						$(".sousuo-list ul").append("<li><a class='external movie-sousuo' href='dyxiangqing.html?id="+b.id+"'>"+b.name+"</a></li>");
+						find = 1;
+						$("#qingkongjilu").show();
+					}			
+				})
+				if(find == 0){
+					//$(".not-found-video").show();
+				}
+				
+		});		
+		});
+	client.getCityWillMoviesLists({"city_id":cityidSure},function(result)//即将上映
+		{		
+				$.hidePreloader();
+				var result=$.parseJSON(result);											
+				var rdil=result.data.info.length;	
+				var mJson=result.data.info;
+				console.log(mJson);
+		var u = navigator.userAgent;
+		var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+		if (isiOS){
+			//$(".not-found-video").css("top","36%");
+		}
+		/*var mJson=[
+			{dede:arclist typeid='8' row='100' orderby='pubdate'}
+				{"videoname":"[field:title/]","id":"[field:id/]"},
+			{/dede:arclist}			
+		];*/
+		$("#sousuo-input").bind('input propertychange',function(){
+				var name = $("#sousuo-input").val();
+				var find = 0;
+				//$(".not-found-video").hide();
+				$("#ss-shanchu").show();
+				$("#sousuo-input").keydown(function(e){				
+					if(e.which === 13){
+						e.preventDefault();
+						$.each(mJson,function(a,b){
+						if(b.name.indexOf(name) != -1 && name && $(".movie-sousuo").text().indexOf(b.name) == -1){
+							$(".sousuo-list ul").append("<li><a class='external movie-sousuo' href='dyxiangqing.html?id="+b.id+"'>"+b.name+"</a></li>");
+							find = 1;
+							$("#qingkongjilu").show();
+						}else{
+							//$(".not-found-video").show();
+						}
+					})
+					}
+				})
+				$("#ss-shanchu").click(function(){
+					$("#sousuo-input").val("");
+				})				
+				$.each(mJson,function(a,b){
+					if(b.name.indexOf(name) != -1 && name && $(".movie-sousuo").text().indexOf(b.name) == -1){
+						$(".sousuo-list ul").append("<li><a class='external movie-sousuo' href='dyxiangqing.html?id="+b.id+"'>"+b.name+"</a></li>");
+						find = 1;
+						$("#qingkongjilu").show();
+					}			
+				})
+				if(find == 0){
+					//$(".not-found-video").show();
+				}
+				
+		});		
+	});		
+	$("#sousuo-quxiao").click(function(){
+		history.go(-1);
+	})
+	$("#qingkongjilu").click(function(){
+		$(".sousuo-list ul li").remove();
+	})
+	</script>
+	</body>
+</html>
+

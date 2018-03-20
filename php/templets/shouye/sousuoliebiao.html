@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>七彩梦视频</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+        <link rel="shortcut icon" href="/favicon.ico">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta content="yes" name="apple-touch-fullscreen">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/light7.min.css">
+        <link rel="stylesheet" href="../../css/light7-swiper.min.css">
+        <link rel="stylesheet" href="../../css/ljy.css">
+        <link rel="stylesheet" href="../../css/iconfont.css">
+        <script type='text/javascript' src='https://res.wx.qq.com/open/js/jweixin-1.0.0.js'></script>
+        <style type="text/css">
+        	.not-found-video{
+        		top:60%;
+        		display: none;
+        		background: #EFEFF4;
+        	}
+        	#ss-shanchu{
+        		display: block;
+        		position: absolute;
+        		color: #d9d9d9;
+        		top: .95rem;
+        		right: 3.3rem;
+        		display: none;
+        	}
+        	#sousuo-input{
+        		width: 72%;
+        		-webkit-appearance:none;
+        	}
+        	.clear-record{
+        		display: none;
+        	}
+        </style>
+	</head>
+	<body>
+	 <div class="page">
+		 <div class="content">
+		 	<form class="dy-sousuo">
+		     	<i class="iconfont icon-sousuo" id="lb-sousuo"></i>
+		     	<input type="search"  placeholder="请输入影片名" id="sousuo-input"/>
+		     	<i class="iconfont icon-shanchuzifu" id="ss-shanchu"></i>
+		     	 &nbsp;<span id="sousuo-quxiao">取消</span>   
+		     </form>
+		     <div class="not-found-video" style="">
+		     	<i class="iconfont icon-shipinqueshen"></i>  
+		     	<p>没有找到相关视频</p> 
+		     </div>
+		     <div class="sousuo-list">
+		     	 <ul>
+		     	 </ul>
+		       <div class="clear-record" id="qingkongjilu">
+		     	 <i class="iconfont icon-shanchu"></i>清空历史记录
+		       </div>
+		     </div>
+		</div>    
+	</div>
+    <script type='text/javascript' src='../../js/jquery-2.2.1.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../js/light7.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='../../js/zg.js?v=20170111' charset='utf-8'></script>
+	<script type="text/javascript">
+	
+		var u = navigator.userAgent;
+		var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+		if (isiOS){
+			$(".not-found-video").css("top","36%");
+		}
+		var mJson=[
+			{dede:arclist typeid='8' row='100' orderby='pubdate'}
+				{"videoname":"[field:title/]","id":"[field:id/]"},
+			{/dede:arclist}			
+		];
+		$("#sousuo-input").bind('input propertychange',function(){
+				var name = $("#sousuo-input").val();
+				var find = 0;
+				$(".not-found-video").hide();
+				$("#ss-shanchu").show();
+				
+				$("#ss-shanchu").click(function(){
+					$("#sousuo-input").val("");
+				})				
+				mJson.forEach(function(b){
+					if(b.videoname.indexOf(name) != -1 && name){
+						find = 1;
+						if($(".movie-sousuo").text().indexOf(b.videoname) == -1 || !$(".movie-sousuo").text()){
+							$(".sousuo-list ul").append("<li><a class='external movie-sousuo' href='/plus/view.php?aid="+b.id+"'>"+b.videoname+"</a></li>");
+						}												
+						$("#qingkongjilu").show();						
+					}					
+				})
+				if(find == 0 ){
+						$(".not-found-video").show();
+					}
+				$("#sousuo-input").keydown(function(e){
+					if(e.which == 13){
+						if(find == 1){
+							$.toast("请点击影片名观看");
+						}else{
+							$.toast("未找到影片");
+						}						
+						e.preventDefault();						
+					}					
+				})
+		});		
+		
+	</script>
+	</body>
+</html>
+

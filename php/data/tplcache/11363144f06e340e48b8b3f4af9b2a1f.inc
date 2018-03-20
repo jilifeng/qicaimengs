@@ -1,0 +1,1 @@
+<div class="swiper-slide"><a href="[field:arcurl/]" class="external"><img src="[field:litpic/]" alt=""></a></div>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>影片中心</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+        <link rel="shortcut icon" href="/favicon.ico">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta content="yes" name="apple-touch-fullscreen">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/light7.min.css">
+        <link rel="stylesheet" href="../../css/ljy.css">
+        <link rel="stylesheet" href="../../css/iconfont.css">
+        <script type='text/javascript' src='https://res.wx.qq.com/open/js/jweixin-1.0.0.js'></script>
+	</head>
+	<body>
+	 <div class="page">
+	     <div class="content">    	    
+			 <div class="sy-content">
+			  	<div class="content-body reying-page">
+			  		{dede:arclist  typeid='8' row='200' orderby='sortrank'}  		
+			  		<div class="item">
+			  			<a href="[field:arcurl/]" class="external"><img class="lazy" data-src="[field:litpic/]" src="/images/sp-jiazai.jpg" alt=""></a>
+			  			<div class="content-bottom">
+			  		      <h4>[field:title/]</h4>
+			  		      <p>[field:shorttitle/]</p>
+			  	        </div>
+			  		</div>
+			  		{/dede:arclist}
+			  	</div>
+			 </div>
+	   </div>
+	</div>
+    <script type='text/javascript' src='../../js/jquery-2.2.1.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../js/light7.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../js/imgload.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../js/zg.js?v=20170111' charset='utf-8'></script>
+    <script type="text/javascript">
+    	function imgload(){
+		$("img.lazy").scrollLoading({
+			attr:"data-src",
+			callback:function(){
+				console.log(222);
+				var $this=$(this);
+				$this.removeClass("lazy").removeAttr("data-src");
+				var src=$this.attr("src");
+				//var v,w=$this.width();
+				//if(w>=640){v=640;}else if(w>480){v=640;}else if(w>320){v=480;}else{v=320;}
+				if(src.toLowerCase().indexOf("uploadfile")>=0 || src.toLowerCase().indexOf("myupload")>=0 || src.toLowerCase().indexOf("http")==-1){
+					//$this.attr("src","/images/dibulogo.png");
+				}
+			}
+		});	
+	}
+window.setTimeout(function(){imgload();},200);
+		var timer = null;
+		$(".content").on("scroll",function(){
+			if (timer) {clearTimeout(timer);}
+			timer = setTimeout(function () {
+				//添加onscroll事件处理
+				imgload();
+			}, 200);
+		});
+		$(".content").trigger("scroll");
+    </script>
+	</body>
+</html>

@@ -1,0 +1,303 @@
+﻿*{
+	margin: 0;
+	padding: 0;
+	font-family: Microsoft YaHei;
+}
+li{
+	list-style: none;
+}
+.width-100{
+	width:100%;
+}
+
+.border-red{
+	border:0.05rem solid red;
+}
+body{
+	background: #f5f5f5;
+}
+.sy-content{
+	margin-bottom: 0.5rem;
+	background-color: #fff;
+}
+
+.sy-title{
+	text-align: center;
+	font-size: 1rem;
+	padding: 0.5rem;
+	height: 2.2rem;
+	line-height: 2.2rem;
+}
+.content-top{
+	padding: 0.5rem 0.5rem;
+	font-size: .85rem;
+	font-weight: 500;
+}
+.no-bottom{
+	padding-bottom: 0!important;
+}
+.content-top span:first-child i{
+	color: #ed4518;
+	font-size: .7rem;
+	margin-left: .2rem;
+}
+.content-top span:last-child{
+	float: right;
+	font-size: 0.7rem;
+	color: #b6907c;
+	margin-top: .1rem;
+}
+.content-top span:last-child i{
+	font-size: 0.7rem;
+	color: #b6907c;
+	margin-top: -0.01rem;
+}
+.swiper-wrapper img{
+	width: 100%;
+}
+.content-bottom h4{
+	font-weight: normal;
+	font-size:.8rem;
+	margin:0 .4rem .1rem .4rem;
+	font-weight: 500;
+	padding-top: 0;
+}
+.content-bottom{
+	margin-top: -.1rem;
+	padding-bottom: 1rem;
+}
+.content-bottom p {
+	color: #adadad;
+	font-size: 0.75rem;
+	margin:.1rem .4rem;
+	padding-bottom: .4rem;
+}
+.sy-content img{
+	width: 100%;
+	margin-bottom: 0;
+}
+
+.content-body{
+	overflow: hidden;
+	width: 100%;
+}
+.content-body .item{
+	width:49%;
+	float: left;
+	position: relative;
+}
+.content-body .item img{
+	height: 5.4rem;
+}
+.content-body .item:nth-child(2n){
+   margin-left: 2%;
+}
+
+.lookmore,.lookmore i{
+	text-align: center;
+	font-size: 0.7rem;
+	color: #b6907c;
+	 width: 100%;
+}
+.lookmore {
+    padding-bottom: 1rem;
+    margin-top: -.8rem;
+
+}
+.buttom-logo{
+	width: 100%;
+	margin:1.5rem auto;
+	/*padding-bottom: 2.5rem;*/
+}
+.buttom-logo img{
+	height: 1.7rem;
+	display: block;
+	margin: 0 auto;
+}
+
+.shouyelogo{
+	height: 2rem;
+	background-color:#f5f5f5;
+	padding: 0.2rem .5rem;
+}
+.shouyelogo img{
+	height: 1.3rem;
+	margin-top: .25rem;
+	vertical-align: middle;
+	margin-top: .35rem;
+}
+.shouyelogo span {
+	float: right;
+	display: inline-block;
+	height: 2rem;
+	line-height: 2rem;
+}
+.shouyelogo span i:nth-child(2){
+	margin: 0 .5rem;
+}
+.shouyelogo span i{
+	font-size: 1rem;
+}
+.scroll{
+	overflow: auto;
+}
+.no-absolute{
+	position: relative;
+	margin-bottom: .6rem;
+	width: 100%;
+}
+.swiper-container{
+	padding-bottom: 0;
+}
+.swiper-container .fu-margin{
+    position: absolute;
+    bottom: .2rem;
+}
+.swiper-pagination-bullet{
+	background-color: white;
+	opacity: 1;
+	transform: scale(0.6);
+}
+.swiper-pagination .swiper-pagination-bullet-active{
+	background-color: red;
+}
+.howlongtime{
+	color: rgba(255,255,255,1);
+    font-size: .8rem;
+	text-align: right;
+	position: absolute;
+	top: 3.9rem;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	width: 100%;
+	opacity: .5;
+	background-color: black;
+}
+/*.howlongtime:hover,.item img:hover + .howlongtime
+{
+	opacity: .5;
+	background-color: black;
+}*/
+
+/* 至尊独享*/
+.zzdx{
+	position: relative;
+}
+.zzdx h4{
+	font-size: .8rem;
+}
+.zzdx i{
+	font-size: 1.5rem;
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -2.65rem;
+	margin-left: -.75rem;
+}
+
+/*热映大片*/
+.reying-page{
+	padding-top: .5rem;
+}
+
+/*搜索*/
+.dy-sousuo{
+    width: 100%;
+    padding: 1rem .5rem;
+    font-size: .8rem;
+    color: #a4a4a4;
+    position: relative;
+    background-color: white;
+}
+.dy-sousuo i{
+	color: #caad9c;
+	font-size: .8rem;
+	position: absolute;
+	margin-top: .1rem;
+	padding: .2rem .4rem .2rem .6rem;
+
+}
+.dy-sousuo input{
+	border-radius:.2rem;
+	padding: .2rem;
+	font-size: .8rem;
+	width: 85%;
+	border:1px solid #caad9c;
+	border-style: solid;
+	padding-left: 1.8rem;
+}
+.sousuo-list ul{
+	padding: 0 1rem;
+	background-color: white;
+}
+.sousuo-list ul li{
+	height: 2rem;
+	line-height: 1.9rem;
+	padding: .1rem 0;
+	border-bottom: 1px solid #ececec;
+}
+.sousuo-list a{
+	color: #8a8a8a;
+	font-size: .8rem;
+}
+.clear-record{
+	font-size: .8rem;
+	color: #8a8a8a;
+	width: 100%;
+	text-align: center;
+	height: 2.5rem;
+	line-height: 2.5rem;
+}
+.clear-record i{
+	font-size: 1rem;
+}
+
+/*  没有找到视频*/
+.not-found-video{
+	width: 100%;
+	text-align: center;
+	position: fixed;
+	top: 50%;
+	margin-top: -5rem;
+}
+.not-found-video p{
+	font-size: .8rem;
+	margin-top: -1rem;
+	color: #a0a0a0;
+}
+.not-found-video i{
+	font-size: 5rem;
+	opacity: .2;
+}
+
+/* 发现页面    表格 */
+.my-found{
+	width: 100%;
+    border-bottom:none;
+    text-align: center;
+}
+.my-found td{
+	width: 33.333333%;
+	height: 6.3rem;
+	border-right: 1px solid #d9d9d9;
+	border-bottom: 1px solid #d9d9d9;
+	vertical-align: middle;
+}
+.bg-white{
+	background-color: #FFFFFF;
+}
+.my-found tr td:last-child{
+	border-right: none;
+}
+
+.my-found img{
+	height: 1.8rem;
+	width: 1.8rem;
+	vertical-align: middle;
+}
+.my-found p{
+	font-size: 14px;
+    margin:0;
+	color: #383838;
+} 

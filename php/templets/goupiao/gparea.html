@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>在线选座影院</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="../../css/light7.min.css">
+<link rel="stylesheet" href="../../css/zg.css?v=20170315">
+<link rel="stylesheet" href="../../css/iconfont.css">
+<link rel="stylesheet" href="../../css/wj.css?v=20170314">
+<script type='text/javascript' src='https://res.wx.qq.com/open/js/jweixin-1.0.0.js'></script>
+<style>
+	.gp_box_title_right{
+		margin-left:5.6rem!important;
+	}
+	.gp_yyjs_xy list-block{
+		display:block;
+	}
+	.gpa_ppsx{
+		display:none;
+	}
+	.yyjs_dypTime{
+		display:none;
+	}
+	.time_nn{
+		font-size:0.65rem!important;
+	}
+	.yanse_ziti{
+		color:red;
+		font-size:.8rem;
+	}
+	.gp_citypicker{
+		display:none;
+	}
+</style>
+</head>
+<body>
+<div class="page scroll" id="gparea">
+	<div class="dysuo dy-sousuo gpa-dy-sousuo">
+		<div class="dysu_left">
+			<span class="gparea_city">北京</span><span class="iconfont icon-down gp_openAddress"></span>
+		</div>	
+		<div class="dysu_right">
+			<i class="iconfont icon-sousuo" id="lb-sousuo"></i>
+			<i class="wj_gpshanchu iconfont icon-shanchuzifu" id="ss-shanchu"></i>
+	     	<input type="text"  placeholder="搜索" id="sousuo-input"/>  
+	     	
+		</div> 
+		<div class="gp_box_title gpa_box_title">
+	     	 	<div class="gp_box_title_left">区域</div>
+	     	 	<div class="gp_box_title_right">筛选</div>
+	     </div>
+	     <div class="yyjs_Time">
+				<ul>
+					<li class="yy_time_on">今天12-27</li>
+					<li>明天12-28</li>
+					<li>后天12-29</li>
+					<li>周六12-30</li>
+				</ul>
+		</div>
+	</div>
+    <div class="tab_box content infinite-scroll" data-distance="100">	
+		   		<div class="yyjs_xx yyjs_xy gp_yyjs_xy list-block" >
+							<ul class="list-container">
+								
+							</ul>
+							<div class="infinite-scroll-preloader">
+			        			<div class="preloader"></div>
+			    			</div>
+				</div>	 	
+		   		<div class="yyjs_xx yyjs_xy gp_yyjs_xy list-block">
+							<ul class="list-container">
+								
+							</ul>
+							<div class="infinite-scroll-preloader">
+			        			<div class="preloader"></div>
+			    			</div>
+				</div>
+		   		<div class="yyjs_xx yyjs_xy gp_yyjs_xy list-block" >
+							<ul class="list-container">
+								
+							</ul>
+							<div class="infinite-scroll-preloader">
+			        			<div class="preloader"></div>
+			    			</div>
+				</div>
+		   		<div class="yyjs_xx yyjs_xy gp_yyjs_xy list-block" >
+							<ul class="list-container">
+								
+							</ul>
+							<div class="infinite-scroll-preloader">
+			        			<div class="preloader"></div>
+			    			</div>
+				</div>
+    </div>
+	
+	<div class="gpa_ppsx">
+		<div class="gpa_ppsx_title">
+			<div class="gpa_ppsx_title_left">品牌</div>
+			<div class="gpa_ppsx_title_right">全部品牌</div>
+		</div>
+		<div class="gpa_ppsx_txyy">
+			<div class="gpa_ppsx_txyy_left">
+				
+			</div>
+			<div class="gpa_ppsx_txyy_right">
+				<ul>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="yyjs_dypTime">
+	<ul>
+		<li>
+			<div class="yyjs_dypTime_li_left">
+				<div>
+					<p>11:59</p>
+					<p class="time_nn">14:35jie</p>
+				</div>
+				<div>
+					<p>guoyu</p>
+					<p  class="time_nn">2hao</p>
+				</div>
+			</div>
+			<div class="yyjs_dypTime_li_right">
+				<span>$8</span>
+				<span class="yanse_ziti">28.9</span>
+			</div>
+		</li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+	<div class="gp_citypicker">
+    	<div class="content city_area_content">		
+			<div class="city_area_title">
+				<span>更换城市</span><span class="iconfont icon-guanbi1 cta_close"></span>				
+			</div>
+			<div class="city_area_selectd">
+				<span>北京</span>
+				<span>当前定位城市</span>
+			</div>
+			<div class="city_area_hot">
+				<p class="city_area_hot_title">热门</p>
+				<div class="city_area_hot_list">
+					<ul>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+    </div>
+</div>	
+<nav class="bar bar-tab fixed mybar"><a class="tab-item external" id="nav-shouye"> <span class="icon iconfont icon-shouye"></span> <span class="tab-label">首页</span> </a> <a class="tab-item external" id="nav-shangcheng"> <span class="icon iconfont icon-shangcheng1"></span> <span class="tab-label">商城</span> </a> <a class="tab-item external active" id="nav-goupiao"> <span class="icon iconfont icon-goupiao-tianchong"></span> <span class="tab-label">购票</span> </a> <a class="tab-item external" id="nav-faxian"> <span class="icon iconfont icon-faxian1"></span> <span class="tab-label">发现</span> </a><a class="tab-item external me color-f60" id="nav-wode"> <span class="icon iconfont icon-wode1"></span> <span class="tab-label">我的</span> </a> </nav>
+</div>
+<div class="bottom_line gpa_bottom_line"></div>
+<script type='text/javascript' src='../../js/jquery-2.2.1.min.js' charset='utf-8'></script> 
+<script type='text/javascript' src='../../js/light7.min.js' charset='utf-8'></script> 
+<script type='text/javascript' src='../../js/hprose.js' charset='utf-8'></script>
+<script type='text/javascript' src='../../js/jiaohu.js?v=20170313' charset='utf-8'></script>
+<script>
+function noscroll(){
+    	var content = document.querySelector('.page');
+		var startY;
+		
+		content.addEventListener('touchstart', function (e) {
+		    startY = e.touches[0].clientY;
+		});
+		
+		content.addEventListener('touchmove', function (e) {
+		    // 高位表示向上滚动
+		    // 底位表示向下滚动
+		    // 1容许 0禁止
+		    var status = '11';
+		    var ele = this;
+		
+		    var currentY = e.touches[0].clientY;
+		
+		    if (ele.scrollTop === 0) {
+		        // 如果内容小于容器则同时禁止上下滚动
+		        status = ele.offsetHeight >= ele.scrollHeight ? '00' : '01';
+		    } else if (ele.scrollTop + ele.offsetHeight >= ele.scrollHeight) {
+		        // 已经滚到底部了只能向上滚动
+		        status = '10';
+		    }
+		
+		    if (status != '11') {
+		        // 判断当前的滚动方向
+		        var direction = currentY - startY > 0 ? '10' : '01';
+		        // 操作方向和当前允许状态求与运算，运算结果为0，就说明不允许该方向滚动，则禁止默认事件，阻止滚动
+		        if (!(parseInt(status, 2) & parseInt(direction, 2))) {
+		            e.preventDefault();
+		        }
+		    }
+		});
+    }
+//noscroll();
+var client = hprose.Client.create("http://test.7cai.tv/index.php/api/api/ticket", ['getOrderLists','getCityCinemasLists2','login', 'getCinemaSchedInfo','getTicketCinemaUrl','register','getTicketCinemaUrl', 'getCityCinemasLists', 'isLogin', 'logout','getCityMoviesLists','getCinemaInfo','getCinemaSchedInfo','getCityWillMoviesLists','findPwd','getMoviesInfo', 'sendCode', 'getUserInfo', 'getMoviesInfo','getAddressList', 'getUploadParams', 'getPayOrderInfo', 'getOpenId','getCityLists','getCityCinemasLists']);
+	var city = window.localStorage.getItem('city_selected') || "北京";
+	var cityidSure = window.localStorage.getItem('city_select1') || 10;	
+	var currentpage=1;
+	var totalpage;	
+	var flag2;
+	function GetDateStr(AddDayCount) {
+	    var dd = new Date();
+	    dd.setDate(dd.getDate() + AddDayCount); //获取AddDayCount天后的日期 
+	    var y = dd.getFullYear();
+	    var m = dd.getMonth() + 1; //获取当前月份的日期 
+	    var d = dd.getDate();
+	    return m + "-" + d;
+	};
+	//获取星期	
+	function GetDateStr3(AddDayCount) {
+	    var ff = new Date();
+	    ff.setDate(ff.getDate() + AddDayCount); //获取AddDayCount天后的日期 
+	    var y = ff.getFullYear();
+	    var m = ff.getMonth() + 1; //获取当前月份的日期 
+	    var d = ff.getDate();
+	    var date = new Date(y, m, d);
+	    weekday = new Array(7);
+	    weekday[0] = "四";
+	    weekday[1] = "五";
+	    weekday[2] = "六";
+	    weekday[3] = "日";
+	    weekday[4] = "一";
+	    weekday[5] = "二";
+	    weekday[6] = "三";
+	    return weekday[date.getDay()];
+	};
+	//页面时间选项卡
+	$(".yyjs_Time ul li:eq(0)").text("今天" + GetDateStr(0));
+	$('.yyjs_Time ul li:eq(1)').text("明天" + GetDateStr(1));
+	$('.yyjs_Time ul li:eq(2)').text("后天" + GetDateStr(2));
+	$('.yyjs_Time ul li:eq(3)').text("周" + GetDateStr3(3) + GetDateStr(3));
+	//页面初始存储判断
+	$(document).ready(function(){
+			$(function(){ 
+	     if (!city) {
+			    $.getScript("http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=jsonp",
+			    function() {
+			        window.localStorage.setItem('city_selected', remote_ip_info.city);
+			        $('.city_area_content').find('.city_area_selectd span:eq(0)').text(remote_ip_info.city);
+			        $('.city_area_content').find(".city_area_hot ul:contains(" + remote_ip_info.city + ")").trigger("click");
+			    });
+			}else{
+			    console.log("ok");
+			    $(".gparea_city").text(city);			    			    
+//			    gundongloading(cityidSure);				
+					listshow(cityidSure);  				
+			};
+		});	
+	  });	
+	//城市列表		
+	function getCitylists() {	    
+	    client.getCityLists(function(result){
+	    var result = $.parseJSON(result);  
+	    if (result.res == 1) {		        
+	        var rdhl = result.data.hot.length;
+	        for (i = 0; i < rdhl; i++) {
+	            $('.city_area_hot_list ul').append('<li index=' + result.data.hot[i].id + '>' + result.data.hot[i].name + '</li>');
+	        }
+	        var character = new Array("A", "B", "C", "D", "E", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "X", "Y", "Z");
+	        var lists = result.data.list;
+	        for (var i = 0; i < 20; i++) {
+	            $('.city_area_content').append('<div class="city_area_hot"><p class="city_area_hot_title">' + character[i] + '</p><div class="city_area_hot_listA"><ul></ul></div></div>');
+	            for (var j in lists[character[i]]) {
+	                $('.city_area_hot_listA ul').eq(i).append(('<li index=' + lists[character[i]][j].id + '>' + lists[character[i]][j].name + '</li>'));
+	            }
+	        };	
+	    };
+	     sessionStorage.setItem('getCityLists',JSON.stringify(result.data));
+	   	 console.log($.parseJSON(sessionStorage.getItem('getCityLists')));  
+	 });
+	};	
+	if(sessionStorage.getItem('getCityLists') == null)
+    {
+    	 getCitylists();    	
+    }else{
+    	var CityListSession=$.parseJSON(sessionStorage.getItem('getCityLists'));
+    	var rdhl = CityListSession.hot.length;
+	        for (i = 0; i < rdhl; i++) {
+	            $('.city_area_hot_list ul').append('<li index=' + CityListSession.hot[i].id + '>' + CityListSession.hot[i].name + '</li>');
+	        }
+	        var character = new Array("A", "B", "C", "D", "E", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "X", "Y", "Z");
+	        var lists = CityListSession.list;
+	        for (var i = 0; i < 20; i++) {
+	            $('.city_area_content').append('<div class="city_area_hot"><p class="city_area_hot_title">' + character[i] + '</p><div class="city_area_hot_listA"><ul></ul></div></div>');
+	            for (var j in lists[character[i]]) {
+	                $('.city_area_hot_listA ul').eq(i).append(('<li index=' + lists[character[i]][j].id + '>' + lists[character[i]][j].name + '</li>'));
+	            }
+	        };	
+    };	
+	//该城市下的电影院列表
+	function listshow(cityidSure,currentpage){			
+		var cityidSure = window.localStorage.getItem('city_select1');
+		var html2 = "";	
+	    client.getCityCinemasLists2({"city_id":cityidSure,"page":currentpage},function(result) 
+	    {
+	    	var result = $.parseJSON(result);
+	    	console.log(result.data);
+	    	totalpage=result.data.common.totalPage;
+	        $.hidePreloader();	        
+	        var data_length = result.data.info.length;	        		        
+	        for (var i = 0; i < data_length; i++) {
+	            if (result.data.info[i].discount_des == "") {
+	                $('.yyjs_sale').hide();
+	                result.data.info[i].discount_des = "";
+	            }
+	            html2 += "<li index='" + result.data.info[i].id + "'><div class='yyjs_yyname'>" + "<p>" + result.data.info[i].name + "</p></div>" + "<div class='yyjs_pjdz gpa_yyjs_pjdz'>" + "<p>￥" + result.data.info[i].cinema_ticket_min_price + "起</p>" + "<p></p></div>" + "<div class='yyjs_address'>" + "<p>" + result.data.info[i].addr + "</p></div>" + "<div class='yyjs_sale'>" + "<div class='yyjs_address'></div></li>";
+	        };
+	        $('.yyjs_xx ul').append(html2);
+		   });	
+	};	
+	 //滚动加载		 
+	 function gundongloading(cityidSure)
+	 {	 	
+	 	 var loading = false;     	
+	     function addItems() {
+	     	  client.getCityCinemasLists2({"city_id":cityidSure,"page":currentpage},function(result) 
+				    {	
+				    	var result = $.parseJSON(result);	
+				    	var html = '';
+				            for (var i = 0; i <result.data.info.length; i++) {
+				                html += "<li index='" + result.data.info[i].id + "'><div class='yyjs_yyname'>" + "<p>" + result.data.info[i].name + "</p></div>" + "<div class='yyjs_pjdz gpa_yyjs_pjdz'>" + "<p>￥" + result.data.info[i].cinema_ticket_min_price + "起</p>" + "<p></p></div>" + "<div class='yyjs_address'>" + "<p>" + result.data.info[i].addr + "</p></div><div class='yyjs_sale'><div class='yyjs_address'></div></li>";
+					        };	        
+			            $('.list-container').append(html);					    	
+		           });
+	     };
+	     addItems();
+	     $(document).on('infinite', '.infinite-scroll',function() {
+	        // 如果正在加载，则退出
+	        if (loading) return;		
+	        // 设置flag
+	        loading = true;
+	        setTimeout(function() {
+	            loading = false;
+	            console.log(totalpage);
+	            console.log(currentpage);
+	            if (currentpage>=totalpage) {
+	                $.detachInfiniteScroll($('.infinite-scroll'));
+	                $('.infinite-scroll-preloader').remove();	                	                
+	                return;
+	            }		
+	            currentpage++;
+	            addItems(currentpage);
+	        }, 500);
+	     });	     
+	 };
+	//搜索
+	client.getCityCinemasLists({"city_id":cityidSure},function(result) 
+	    {
+	    			var result = $.parseJSON(result);
+		 			var mJson = result.data.info;  	        
+			        $("#sousuo-input").bind('input propertychange',function() {
+			            var name = $("#sousuo-input").val();
+			            $("#ss-shanchu").show();
+			            $("#sousuo-input").keydown(function(e) {
+			                $(".yyjs_xx ul").empty();
+			                if (e.which === 8 && $('.yyjs_xx ul li').text() == "") {
+			                    $(".preloader").hide();	
+			                    $(".yyjs_xx ul").css('margin-top', '0');
+			                    listshow(cityidSure);
+			                } else {			                   
+			                    $(".yyjs_xx ul").css('margin-top', '6rem');
+			                }
+			                if (e.which === 13) {
+			                    e.preventDefault();
+			                    $.each(mJson,
+			                    function(a, b) {
+			                        if (b.name.indexOf(name) != -1 && name && $(".yyjs_yyname p").text().indexOf(b.name) == -1) {
+			                            $(".yyjs_xx ul img").hide();
+			                            $(".yyjs_xx ul").css('margin-top', '0');
+			                            $(".yyjs_xx ul").append("<li index='" + b.id + "'><div class='yyjs_yyname'>" + "<p>" + b.name + "</p></div>" + "<div class='yyjs_pjdz gpa_yyjs_pjdz'>" + "<p>￥" + b.cinema_ticket_min_price + "起</p>" + "<p></p></div>" + "<div class='yyjs_address'>" + "<p>" + b.addr + "</p></div>" + "<div class='yyjs_sale'>" + "<div class='yyjs_address'>" + "<p class='cinema_zuijin_paiqi'>最近场次</p>" + "</div></li>");	
+			                        } else {			                           
+			                            $(".yyjs_xx ul").css('margin-top', '6rem');
+			                        }
+			                    })
+			                }
+			            });
+			            $("#ss-shanchu").click(function(){
+							$("#sousuo-input").val("");	
+							$(".yyjs_xx ul").empty();
+							$(".yyjs_xx ul").addClass('list-container');
+			                $(".preloader").show();
+			                $(".yyjs_xx ul").css('margin-top', '0');
+							listshow(cityidSure);
+			                gundongloading();
+						});		
+			            if ($('#sousuo-input').val() == "" && $('.yyjs_xx ul li').text() == "") {
+			            	$(".yyjs_xx ul").addClass('list-container');
+			                $(".preloader").show();
+			                $(".yyjs_xx ul").css('margin-top', '0');
+			                listshow(cityidSure);
+			                gundongloading();
+			            };
+			            $.each(mJson,
+			            function(a, b) {
+			                if (b.name.indexOf(name) != -1 && name && $(".yyjs_yyname p").text().indexOf(b.name) == -1) {
+			                    $(".yyjs_xx ul").css('margin-top', '0');
+			                    $(".preloader").hide();
+			                    $(".yyjs_xx ul").removeClass('list-container');
+			                    $(".yyjs_xx ul").append("<li index='" + b.id + "'><div class='yyjs_yyname'>" + "<p>" + b.name + "</p></div>" + "<div class='yyjs_pjdz gpa_yyjs_pjdz'>" + "<p>￥" + b.cinema_ticket_min_price + "起</p>" + "<p></p></div>" + "<div class='yyjs_address'>" + "<p>" + b.addr + "</p></div>" + "<div class='yyjs_sale'>" + "<div class='yyjs_address'>" + "<p class='cinema_zuijin_paiqi'>最近场次</p>" + "</div></li>");
+			                }			                
+			            });
+			        });	
+	});	
+	//城市列表选择存储city对应id
+		$(".city_area_content").on("click", "li",
+		function() {	
+		    currentpage=1;
+		    Areaid = $(this).attr("index");
+		    Areatext = $(this).text();
+		    window.localStorage.setItem('city_select1', Areaid);
+		    window.localStorage.setItem('city_selected', Areatext);
+		    cityidSure=window.localStorage.getItem('city_select1')
+		    $('.yyjs_xy ul').empty();		    
+		    $('.gp_citypicker').hide();
+		    $('.tab_box').show();
+		    $('.yyjs_Time').show();
+		    $('.gp_box_title').show();	    
+		    $(".gparea_city").text(Areatext);
+		    Areaid = parseInt(Areaid);		    
+		    document.location.reload();;
+		    /*gundongloading(Areaid);*/
+		});
+		gundongloading(cityidSure);
+		/*function gundong()
+		{
+			gundongloading(cityidSure);
+			alert(345);
+		}
+		var t = setTimeout(gundong, 1000);*/
+	//截取url从上个页面带过来的电影id
+	function GetRequest() {
+	    var url = location.search; //获取url中"?"符后的字串 
+	    var theRequest = new Object();
+	    if (url.indexOf("?") != -1) {
+	        var str = url.substr(1);
+	        strs = str.split("&");
+	        for (var i = 0; i < strs.length; i++) {
+	            theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+	        }
+	    };
+	    return theRequest;
+	};
+	var Request = undefined;
+	Request = GetRequest();
+	var thismovie_id = Request["id"];
+	thismovie_id = parseInt(thismovie_id);
+	//跳转加影院id以及影片id	
+	$(document).on("click", ".yyjs_xx ul li",
+	function() {
+	    var thisCinema_id = $(this).attr('index');
+	    window.location.href = "dyyjieshao.html?id=" + thisCinema_id + "&movie=" + thismovie_id;
+	});
+	//区域点击
+	$(".gp_box_title_left").click(function() {
+	    $(".gp_box_title_right").css({
+	        'color': '',
+	        'border-bottom': 'none'
+	    });
+	    $(".yyjs_Time").show();
+	    $(".tab_box").show();
+	    $(".gpa_ppsx").hide();
+	});
+	//筛选点击
+	$('.gp_box_title_right').click(function() {
+	    $(".gp_box_title_right").css({
+	        'color': 'red',
+	        'border-bottom': '1px solid red'
+	    });
+	    $(".gp_box_title_left").css({
+	        'color': '',
+	        'border-bottom': 'none'
+	    });
+	    $(".gp_box_list2").hide();
+	    $(".gp_box_list1").show();
+	    $(".gpa_area").hide();
+	    $(".gpa_ppsx").show();
+	    $(".yyjs_Time").hide();
+	    $(".tab_box").hide();
+	    $('.gpa_ppsx_txyy_right ul').html("");
+	    /*console.log(result.data.info);*/
+	});
+	//筛选下的全部品牌点击
+	$('.gpa_ppsx_title_right').click(function() {
+	    $('.gpa_ppsx').hide();
+	    $('.yyjs_Time').show();
+	    $('.tab_box').show();
+	});
+	//关闭城市列表
+	$('.cta_close').click(function() {
+	    $('.gp_citypicker').hide();
+	    $('.yyjs_Time').show();
+	    $('.gp_box_list1').show();
+	    $('.gp_box_title').show();
+	    $('.tab_box').show();
+	});
+	//页面日期选项卡点击
+	$('.yyjs_Time ul li').click(function() {
+	    $('.yyjs_Time ul li').css('color', '');
+	    $('.yyjs_Time ul li').removeClass('yy_time_on');
+	    $(this).css('color', 'red');
+	    $(this).addClass('yy_time_on') 
+	    var index = $(this).index();
+	    $(".tab_box > div").eq(index).show().siblings().hide();
+	});
+	//点击显示城市列表
+	$('.gp_openAddress,.gparea_city').click(function() {
+	    $('.gpa_ppsx').hide();
+	    $('.gp_citypicker').show();
+	    $('.tab_box').hide();
+	    $('.yyjs_Time').hide();
+	    $('.gp_box_title').hide();
+	});	 
+	$.init();	
+</script>
+</body>
+</html>

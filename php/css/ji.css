@@ -1,0 +1,115 @@
+img{
+	border:none;
+	border:0;
+}
+.content_new{
+	width:100%;
+	background: #ffffff;
+	margin:0 auto;
+}
+.content_size{
+	width:94%;
+	margin:0 auto;	
+}
+.white_w{
+	display:block;
+	width:100%;
+	height:0.7rem;
+}
+.main_uu{
+	width: 100%;
+}
+.color_hh{
+	font-size: 0.6rem;
+	color:#000;
+	font-weight: bold;
+}
+.main_uu p{
+	margin-top:0.2rem;
+	font-size: 0.6rem;
+	color:#000;
+	text-indent: 2em;
+}
+.span_span{
+	font-size: 0.6rem;
+	color:#000;
+	display: inline-block;
+}
+.lunbo{
+	width:100%;
+	height:10.55rem;
+}
+.lunbo img{
+	width:100%;
+	height:10.55rem;
+}
+.name_s{
+	width:100%;
+	height:2.15rem;
+	background: #FFFFFF;
+	border-bottom: solid 1px #D9D9D9;	
+}
+.name_s p{
+	font-size: 0.75rem;
+	color:#383838;
+	margin-left:0.5rem;
+	margin:0;
+	line-height: 2.25rem;
+}
+.money{
+	width:100%;
+	height:3rem;
+	border-bottom: solid 1px #D9D9D9;	
+}
+
+.money_new{
+	margin:0;
+	height:1.5rem;
+}
+.money_new span{
+	font-size: 0.7rem;
+	color:#383838;
+}
+.money_new i{
+	font-size: 0.7rem;
+	color:#BA927E;
+	font-style: normal;
+}
+.money_non{
+	font-size: 0.7rem;
+	margin:0;
+	height:1.5rem;
+}
+.money_non i{
+	font-size: 0.9rem;
+	color:#ED4518;
+	font-style: normal;
+}
+.money_non b{
+	font-size: 0.55rem;
+	color:#ED4518;
+	font-weight: normal;
+}
+.back{
+	width:100%;
+	height:0.5rem;
+	background: #F5F5F5;
+}
+.xian{
+	width:95%;
+	margin: 0 auto;
+	height: 2.15rem;
+	background: #FFFFFF;
+	border-bottom: solid 1px #D9D9D9;	
+	font-size: 0.75rem;
+	color:#909090;
+	line-height: 2.15rem;
+}
+.pict{
+	width:95%;
+	margin: 0 auto;
+	border: none;
+}
+.pict img{
+	width: 100%;
+}

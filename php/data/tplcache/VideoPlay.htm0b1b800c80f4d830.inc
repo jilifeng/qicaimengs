@@ -1,0 +1,42 @@
+<?php
+$z[0]=Array("field","",346,365);
+$z[0][4]['name']="title";
+$z[1]=Array("field","",3528,3547);
+$z[1][4]['name']="title";
+$z[2]=Array("field","",3775,3800);
+$z[2][4]['name']="bofangcishu";
+$z[3]=Array("field","",3836,3857);
+$z[3][4]['name']="pingfen";
+$z[4]=Array("field","",4150,4170);
+$z[4][4]['name']="daoyan";
+$z[5]=Array("field","",4227,4250);
+$z[5][4]['name']="shangying";
+$z[6]=Array("field","",4307,4327);
+$z[6][4]['name']="zhuyan";
+$z[7]=Array("field","",4383,4405);
+$z[7][4]['name']="biaoqian";
+$z[8]=Array("field","",4448,4469);
+$z[8][4]['name']="jianjie";
+$z[9]=Array("arclist"," \r\n					<a href=\"[field:arcurl/]\" class=\"external color-default mytouch\">\r\n					<li>\r\n						<div class=\"vpl_remonForyou_list_left\"> <img src=\"[field:litpic/]\" class=\"tuijian-pic\" style=\"width: 100%;height: 100%;\"/> </div>\r\n						<div class=\"vpl_remonForyou_list_right\">\r\n							<div class=\"vpl_remonForyou_list_right_des\">\r\n								<p style=\"font-size:0.8rem;margin:0;padding:0;\">[field:title/]</p>\r\n								<p style=\"font-size:0.75rem;color:#909090;margin-top:0.17rem;\">[field:shorttitle/]</p>\r\n							</div>\r\n							<div class=\"vpl_remonForyou_list_right_go iconfont icon-yingdaicon10\"></div>\r\n						</div>\r\n					</li>\r\n					</a> \r\n					",4707,5456);
+$z[9][4]['flag']="c";
+$z[9][4]['typeid']="8";
+$z[9][4]['row']="6";
+$z[9][4]['orderby']="sortrank";
+$z[9][4]['addfields']="gaishu";
+$z[9][4]['channelid']="17";
+$z[10]=Array("arclist"," \r\n					<a href=\"[field:arcurl/]\" class=\"external color-default mytouch\">\r\n					<li>\r\n						<div class=\"vpl_remonForyou_list_left\"> <img src=\"[field:litpic/]\" class=\"tuijian-pic\" style=\"width: 100%;height: 100%;\"/> </div>\r\n						<div class=\"vpl_remonForyou_list_right\">\r\n							<div class=\"vpl_remonForyou_list_right_des\">\r\n								<p style=\"font-size:0.8rem;margin:0;padding:0;\">[field:title/]</p>\r\n								<p style=\"font-size:0.7rem;color:#909090;margin-top:0.17rem;\">[field:shorttitle/]</p>\r\n							</div>\r\n							<div class=\"vpl_remonForyou_list_right_go iconfont icon-yingdaicon10\"></div>\r\n						</div>\r\n					</li>\r\n					</a>\r\n					",7619,8357);
+$z[10][4]['typeid']="8";
+$z[10][4]['row']="4";
+$z[10][4]['orderby']="sortrank";
+$z[10][4]['addfields']="gaishu";
+$z[10][4]['channelid']="17";
+$z[11]=Array("field","",8816,8836);
+$z[11][4]['name']="reping";
+$z[12]=Array("field","",9779,9803);
+$z[12][4]['name']="bofangyuan";
+$z[13]=Array("field","\$url=@me;\$headers = get_headers(\$url);if(stristr(\$headers[6],'Location')){@me=str_replace('Location: ','',\$headers[6]);}else{@me = \$url;}",10035,10229);
+$z[13][4]['name']="videourl";
+$z[13][4]['runphp']="yes";
+$z[13][4]['/']="";
+
+?>

@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>地区选择</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="../../css/light7.min.css">
+<link rel="stylesheet" href="../../css/app.css">
+<link rel="stylesheet" href="../../css/wj.css">
+<link rel="stylesheet" href="../../css/zg.css?v=20170315">
+<link rel="stylesheet" href="../../css/iconfont.css">
+<script type='text/javascript' src='https://res.wx.qq.com/open/js/jweixin-1.0.0.js'></script>
+<style>
+.city_area_title
+{
+	width:100%;
+	height:2rem;
+	text-align: center;
+	line-height: 2rem;
+	border-bottom: 1px solid #ccc;
+	overflow: hidden;
+	background:#fff;
+}
+.city_area_title span
+{
+	font-size:0.85rem;
+}
+.city_area_title span
+{
+	float:left;
+}
+.city_area_title span:nth-child(1)
+{
+	margin-left:8rem;
+}
+.city_area_title span:nth-child(2)
+{
+	margin-top:0.2rem;
+	margin-left:6rem;
+}
+.city_area_selectd
+{
+	width:100%;
+	height:2rem;
+	line-height: 2rem;
+	border-bottom: 1px solid #ccc;
+	overflow: hidden;
+	background:#fff;
+}
+.city_area_selectd span:nth-child(1)
+{
+	margin-left: 0.5rem;
+	color:red;
+}
+.city_area_hot_title
+{
+	width:100%;
+	height:2rem;
+	margin-left: 0.5rem;
+	line-height: 2rem;
+}
+.city_area_hot_list ul
+{
+	background:#fff;
+	overflow: hidden;
+}
+.city_area_hot_list ul li
+{
+	width:25%;
+	height:1.8rem;
+	line-height: 1.8rem;
+	text-align: center;
+	float: left;
+	list-style: none;
+	color:#ec4619;
+	border-right:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	font-size:0.75rem;
+}
+.city_area_hot_listA ul
+{
+	background:#fff;
+	overflow: hidden;
+}
+.city_area_hot_listA ul li
+{
+	width:25%;
+	height:1.8rem;
+	line-height: 1.8rem;
+	text-align: center;
+	float: left;
+	list-style: none;
+	color:#909090;
+	border-right:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	font-size:0.75rem;
+}
+</style>
+</head>
+<body>
+<div class="page wj_page bg-f5" id="cityarea">		
+		<div class="content city_area_content">		
+			<div class="city_area_title">
+				<span>更换城市</span><span class="iconfont icon-guanbi1 cta_close"></span>				
+			</div>
+			<div class="city_area_selectd">
+				<span>北京</span>
+				<span>当前定位城市</span>
+			</div>
+			<div class="city_area_hot">
+				<p class="city_area_hot_title">热门</p>
+				<div class="city_area_hot_list">
+					<ul>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+</div>
+<script type='text/javascript' src='../../js/jquery-2.2.1.min.js' charset='utf-8'></script> 
+<script type='text/javascript' src='../../js/light7.min.js' charset='utf-8'></script> 
+<script type='text/javascript' src='../../js/hprose.js' charset='utf-8'></script>
+<script>	
+function noscroll(){
+    	var content = document.querySelector('.content');
+		var startY;
+		
+		content.addEventListener('touchstart', function (e) {
+		    startY = e.touches[0].clientY;
+		});
+		
+		content.addEventListener('touchmove', function (e) {
+		    // 高位表示向上滚动
+		    // 底位表示向下滚动
+		    // 1容许 0禁止
+		    var status = '11';
+		    var ele = this;
+		
+		    var currentY = e.touches[0].clientY;
+		
+		    if (ele.scrollTop === 0) {
+		        // 如果内容小于容器则同时禁止上下滚动
+		        status = ele.offsetHeight >= ele.scrollHeight ? '00' : '01';
+		    } else if (ele.scrollTop + ele.offsetHeight >= ele.scrollHeight) {
+		        // 已经滚到底部了只能向上滚动
+		        status = '10';
+		    }
+		
+		    if (status != '11') {
+		        // 判断当前的滚动方向
+		        var direction = currentY - startY > 0 ? '10' : '01';
+		        // 操作方向和当前允许状态求与运算，运算结果为0，就说明不允许该方向滚动，则禁止默认事件，阻止滚动
+		        if (!(parseInt(status, 2) & parseInt(direction, 2))) {
+		            e.preventDefault();
+		        }
+		    }
+		});
+    }
+noscroll();
+
+var client = hprose.Client.create("http://test.7cai.tv/index.php/api/api/ticket", ['getOrderLists','login', 'getCityMoviesLists2','getCityWillMoviesLists2','getCinemaSchedInfo','getTicketCinemaUrl','register','getTicketCinemaUrl', 'getCityCinemasLists', 'isLogin', 'logout','getCityMoviesLists','getCinemaInfo','getCinemaSchedInfo','getCityWillMoviesLists','findPwd','getMoviesInfo', 'sendCode', 'getUserInfo', 'getMoviesInfo','getAddressList', 'getUploadParams', 'getPayOrderInfo', 'getOpenId','getCityLists','getCityCinemasLists']);
+	client.getCityLists(function(result){
+					var result = $.parseJSON(result);					
+					if (result.res == 1)
+					{						
+						var rdhl=result.data.hot.length;						
+						for(i=0;i<rdhl;i++)
+						{		
+							$('.city_area_hot_list ul').append('<li index='+result.data.hot[i].id+'>'+result.data.hot[i].name+'</li>');					
+						}
+						var character = new
+						Array("A","B","C","D","E","F","G","H","J","K","L","M","N","P","Q","R","S","T","X","Y","Z");	
+						var lists = result.data.list;	
+						for(var i=0;i<20;i++)
+						{				
+							$('.city_area_content').append('<div class="city_area_hot"><p class="city_area_hot_title">'+character[i]+'</p><div class="city_area_hot_listA"><ul></ul></div></div>');								
+							for (var j in lists[character[i]]) 
+	                			{
+	                				$('.city_area_hot_listA ul').eq(i).append(('<li index='+lists[character[i]][j].id+'>'+lists[character[i]][j].name+'</li>'));	              				
+	                			}	
+						};
+						$('.city_area_hot_list ul li').click(function(){
+							var hotAreaid=$(this).attr("index");
+							var hotAreatext=$(this).text();
+							console.log(hotAreaid);
+						});
+						$('.city_area_hot_listA ul li').click(function(){	
+							var Areaid=$(this).attr("index");
+							var Areaidtext=$(this).text();
+							console.log(Areaid);
+						});												
+						$('.cta_close').click(function(){							
+								if(hotAreaid=undefined)
+							{
+								client.getCityCinemasLists({"city_id":Areaid},function(result)
+								{
+									var result = $.parseJSON(result);
+									console.log(result);									
+								});
+							}else
+							{
+								client.getCityCinemasLists({"city_id":hotAreaid},function(result)
+								{
+										var result = $.parseJSON(result);
+										console.log(result);								
+								});
+							}
+						});
+						window.localStorage.setItem(city_id,hotAreaid&Areaid);
+					}});				
+</script>
+
+</body
+</html>

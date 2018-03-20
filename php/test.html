@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>七彩梦视频</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="css/light7.min.css">
+<link rel="stylesheet" href="css/zg.css">
+<script type='text/javascript' src='https://res.wx.qq.com/open/js/jweixin-1.0.0.js'></script>
+<style type="text/css">
+	.a,.b{
+		width: 100%;
+		text-align: center;
+		border: 1px solid black;
+		height: 2rem;
+		line-height: 2rem;
+	}
+	.c{
+		width: 30%;
+		height: 3rem;
+		border: 1px solid black;
+	}
+</style>
+</head>
+<body>
+
+<div class="page">
+	<div class="content">
+		<div class="a">拍照</div>
+		<div class="b">相册</div>
+		<div class="c"><img id="d"/></div>
+	</div>	
+</div>
+<script type='text/javascript' src='js/jquery-2.2.1.min.js' charset='utf-8'></script> 
+<script type='text/javascript' src='js/light7.min.js' charset='utf-8'></script> 
+<script type='text/javascript' src='js/hprose.js' charset='utf-8'></script> 
+<script type='text/javascript' src='js/jiaohu.js?v=20170120' charset='utf-8'></script>
+<script type="text/javascript">	
+$.showIndicator();
+		$(".a").click(function(){
+			client1.getWxSdkSignInfo({"url":window.location.href},function(result){
+		    	var result = $.parseJSON(result);
+		    	if(result.res == 1){
+		    		 wx.config({
+					    debug: false, 
+					    appId: result.data.appid, 
+					    timestamp:result.data.timestamp , 
+					    nonceStr: result.data.noncestr, 
+					    signature: result.data.signature,
+					    jsApiList: ["onMenuShareTimeline","onMenuShareAppMessage","onMenuShareQQ","chooseImage","previewImage"]
+					});
+					wx.chooseImage({
+					    count: 1, // 默认9
+					    sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+					    sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+					    success: function (res) {
+					        var localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
+					   		$("#d").attr("src",localIds);
+					    },
+					    fail:function(res){
+					    	alert(res);
+					    }
+					});	
+					
+				}else{
+					$.toast(result.msg);
+				}
+		  });
+			
+		})
+		
+</script>
+</body>
+</html>

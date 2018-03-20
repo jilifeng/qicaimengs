@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>推荐有礼</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="../../../css/light7.min.css">
+<link rel="stylesheet" href="../../../css/zg.css">
+<link rel="stylesheet" href="../../../css/iconfont.css">
+<script type='text/javascript' src='https://res.wx.qq.com/open/js/jweixin-1.0.0.js'></script>
+
+<style>
+  .tj-fenxiang li{
+  	width: 3rem;
+  	height: 4rem;
+  }
+   .tj-fenxiang li img{
+   	display: block;
+   	width: 2.7rem;
+   	height: 2.7rem;
+   	margin: 0 auto;
+   }
+ .tj-fenxiang li span{
+     	display: block;
+     	font-size: .7rem;
+     	text-align: center;
+   }
+.tj-fenxiang li a{
+      color: black;
+   }
+
+
+
+  /*1-1*/
+   #link-address{
+   	width: 100%;
+   	height: 5rem;
+   	position: absolute;
+   	bottom: 0;
+   	background: #f5f5f5;
+   	opacity: 1;
+   	display: none;
+   	padding-top: .5rem;
+   }
+   #link-address div, #link-address p{
+   	display: block;
+   	width: 100%;
+   	word-wrap: break-word;
+   	font-size: .7rem;
+   	padding: 0 .5rem;
+    text-align: center;
+   }
+   #tip{
+   	opacity: .5;
+   	background: black;
+   }
+   #tip img{
+   	width: 50%;
+   	float: right;
+   }
+   .zindex{
+   	z-index: 9999;
+   }
+</style>
+</head>
+<body>
+<div class = "page-group">
+<div class = "page" id="tip">
+		<img src="../../../images/share-tip.png" alt="" />
+</div>
+<div class="page" id="tuijianYouli">
+	<div class="content">
+		
+	
+		<div class="red-bag"></div>
+		<div class="tj-yaoqing">
+			<p>成功邀请好友注册并消费即可获得<span>会员</span></p>
+			<p><span>积分奖励</span>积分商城上万种商品等你来挑</p>
+		</div>
+		<div class="tj-erwei" >
+			<div id="tj-erwei"></div>
+			<p>我的二维码 扫码推荐</p>
+		</div>
+		<div class="tj-fenxiang" id="tj">
+			<li id="share-pengyouquan">
+				<img src="../../../images/pengyouquan.png"/>
+				<span>朋友圈</span>
+			</li>
+			<li id="share-wx">
+				<img src="../../../images/weixin.png"/>
+				<span>微信</span>
+			</li>
+			<li id="share-qq">
+				<img src="../../../images/qq.png"/>
+				<span>QQ</span>
+			</li>
+		</div>
+		<div class="tj-fenxiang">
+			<li id="sinashare">
+				<a target="_blank">
+				<img src="../../../images/weibo.png"/>
+				<span>微博</span>
+				</a>
+			</li>
+			<li id="share-link">
+				<img src="../../../images/fuzhilianjie.png"/>
+				<span>复制链接</span>
+			</li>
+			<li id="share-other">
+				<img src="../../../images/qitapingtai.png"/>
+				<span>其他平台</span>
+			</li>
+		</div>
+		<div class="tj-foot">
+			<p id="haoyou-page">查看我的邀请分享 <i class="iconfont icon-yingdaicon10"></i></p>
+			<p>您还没有邀请成功，您的好友正在等您分享呢~</p>
+		</div>
+
+<!--1-1-->
+<div id="link-address">
+   <div></div>
+   <p>长按复制，点击关闭</p>
+</div>
+</div>
+</div>
+</div>
+<script type='text/javascript' src='../../../js/jquery-2.2.1.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='../../../js/light7.min.js' charset='utf-8'></script>
+<script src='../../../js/cn.min.js'></script>
+<script type='text/javascript' src="../../../js/qrcode.js"></script>
+<script type='text/javascript' src='../../../js/hprose.js' charset='utf-8'></script>
+<script type='text/javascript' src='../../../js/jiaohu.js?v=20170303' charset='utf-8'></script>
+<script type="text/javascript">
+		$("#tj li").click(function(){
+			$("#tip").addClass("zindex")
+		})
+		$("#share-other").click(function(){
+			$("#tip").addClass("zindex")
+		})
+
+		$("#tip").click(function(){
+			$(this).removeClass("zindex")
+		})
+</script>
+</body>
+</html>

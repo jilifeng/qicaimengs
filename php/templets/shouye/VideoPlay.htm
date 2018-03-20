@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<title>{dede:field.title/}-视频播放</title>
+<link rel="stylesheet" href="../../css/light7.min.css" />
+<link rel="stylesheet" href="../../css/wj.css" />
+<link rel="stylesheet" href="../../css/zg.css?v=20170116" />
+<link rel="stylesheet" href="../../css/iconfont.css">
+<script type='text/javascript' src='https://res.wx.qq.com/open/js/jweixin-1.0.0.js'></script>
+<style>
+li {
+	list-style: none;
+}
+body {
+	background: #fff;
+	overflow: auto;
+}
+.jwplayer .jw-icon-barlogo:before {
+	content: none;
+}
+.jw-icon-barlogo {
+	background: url('') no-repeat;
+	background-position: center;
+}
+#video {
+	width: 100%;
+	height: 100%;
+}
+.tj-fenxiang li {
+	width: 3rem;
+	height: 4rem;
+}
+.tj-fenxiang li img {
+	display: block;
+	width: 2.7rem;
+	height: 2.7rem;
+	margin: 0 auto;
+}
+.tj-fenxiang li span {
+	display: block;
+ font-size: .7rem;
+	text-align: center;
+}
+.tj-fenxiang li a {
+	color: black;
+}
+a:active {
+	color: black;
+}
+/*1-1*/
+#link-address {
+	width: 100%;
+	height: 5rem;
+	position: absolute;
+	bottom: 0;
+	background: #f5f5f5;
+	opacity: 1;
+	display: none;
+ padding-top: .5rem;
+}
+#link-address div, #link-address p {
+	display: block;
+	width: 100%;
+	word-wrap: break-word;
+ font-size: .7rem;
+ padding: 0 .5rem;
+}
+#link-address p {
+	text-align: center;
+}
+.tj-fenxiang li span:nth-child(1) {
+	margin-top: 0;
+}
+.vp-fenxiang .tj-fenxiang li span:nth-child(2) {
+	width: auto;
+	margin-left: -0.1rem;
+}
+.vpl_VideoDetail_num_left{
+	font-size: .8rem;
+}
+.vpl_VideoDetail_des_inf span{
+	font-size: .8rem;
+}
+.vpl_remonForyou h1{
+	font-size: .85rem;
+}
+.vpl_remonForyou_list_right{
+	width: 53%;
+}
+.vpl_remonForyou i{
+	font-size: 1rem;
+}
+.icon-up,.icon-down{
+	color:gray;
+}
+.fenge-10{
+	margin-bottom: 0;
+	height: 33%;
+}
+.vpl_remonForyou{
+	margin-top: 1.5rem;
+}
+.maigintop-05{
+	font-size:1rem!important;
+	}
+.bofang_yuan{
+		margin-left:0.4rem;
+	}
+.tuijian-pic{
+	width: 100%;
+	height: 100%;
+}
+.field_title{
+	font-size:0.8rem;
+	margin:0;
+	padding:0;
+}
+.field_litle{
+	font-size:0.75rem;
+	color:#909090;
+	margin-top:0.17rem;
+}
+.vpl_box vpl_box_remonforyou{
+	display:none;
+}
+.no_way{
+	width: 100%;
+	height: 1rem;
+}
+.vpl_VideoDetail_num_left{
+	color:#d9d9d9;
+}
+.icon-xiaoxizhongxin{
+	font-size: 1rem;
+}
+.icon-xiazai{
+	color:#d9d9d9!important;
+}
+</style>
+</head>
+<body>
+<div class="page" id="VideoPlay">
+	<div class="content">	
+		<!--<div class="vpl_box"> 
+			<div class="vp-fenxiang" id="vp-fenxiang">
+		        	<div></div>
+		        	<div class="vp-fenxiang-2">
+		        		<div class="fenge-5"></div>
+			        	<div class="tj-fenxiang">
+							<li>
+								<span class=""><img src="/images/pengyouquan.png"/></span>
+								<span>朋友圈</span>
+							</li>
+							<li>
+								<span class=""><img src="/images/weixin.png"/></span>
+								<span>微信</span>
+							</li>
+							<li>
+								<span class=""><img src="/images/qq.png"/></span>
+								<span>QQ</span>
+							</li>
+						</div>
+						<div class="tj-fenxiang">
+							<li>
+								<span class=""><img src="/images/weibo.png"/></span>
+								<span>微博</span>
+							</li>
+							<li>
+								<span class=""><img src="/images/fuzhilianjie.png"/></span>
+								<span>复制链接</span>
+							</li>
+							<li>
+								<span class=""><img src="/images/qitapingtai.png"/></span>
+								<span>其他平台</span>
+							</li>
+						</div>
+	        	<div id="fenxiang-close">取消</div>
+	       	</div>
+	    </div>-->
+			
+			<div class="fenge-10"></div>
+			<section class="vpl_VideoDetail">
+				<div class="vpl_VideoDetail_des">
+					<div class="vpl_VideoDetail_des_title">
+						<h2 class="fontsize-1">{dede:field.title/}</h2>
+						<span class="iconfont icon-down vpl_introduction maigintop-05" index="1"></span><span class="color-gray">简介</span> 
+					</div>
+					<div class="vpl_VideoDetail_des_inf"> 
+						<span>{dede:field.bofangcishu/}</span><span>次播放</span> <span>{dede:field.pingfen/}分</span> <span class="bofang_yuan">播放源：</span> <span id="bofangyuan"> <img src="/images/mangguo.png" style="transform: scale(1.3);"/> <span>芒果TV</span> </span> 
+					</div>
+					<div class="vpl_VideoDetail_member">
+						<ul>
+							<li> <span>导演 : </span> <span>{dede:field.daoyan/} </span> </li>
+							<li> <span>上映 : </span> <span>{dede:field.shangying/} </span> </li>
+							<li> <span>主演 : </span> <span>{dede:field.zhuyan/}</span> </li>
+							<li> <span>标签 : </span> <span>{dede:field.biaoqian/}</span> </li>
+							<li> 简介 : <span> {dede:field.jianjie/} </span> </li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<div class="vpl_middleline"></div>
+			<div class="vpl_remonForyou">
+				<h1>为你推荐</h1>
+			</div>
+			<section class="vpl_remonForyou_list">
+				<ul>
+					{dede:arclist flag="c" typeid='8' row='6' orderby='sortrank' addfields='gaishu' channelid='17'} 
+					<a href="[field:arcurl/]" class="external color-default mytouch">
+					<li>
+						<div class="vpl_remonForyou_list_left"> <img src="[field:litpic/]" class="tuijian-pic"/> </div>
+						<div class="vpl_remonForyou_list_right">
+							<div class="vpl_remonForyou_list_right_des">
+								<p class="field_title">[field:title/]</p>
+								<p class="field_litle">[field:shorttitle/]</p>
+							</div>
+							<div class="vpl_remonForyou_list_right_go iconfont icon-yingdaicon10"></div>
+						</div>
+					</li>
+					</a> 
+					{/dede:arclist}
+				</ul>
+				<div class="vpl_slidemore">
+					<p class="vpl_slidemore_go mytouch">查看更多></p>
+				</div>
+			</section>
+			
+			<!--<section class="vpl_coment_section">
+	        	<div class="vpl_coment_section_fenlei">
+	            	<span style="float:left; margin-left:0.5rem;">热评</span>
+	                <span style="float:right;margin-right:0.5rem;color:#909090;">全部热评</span>
+	            </div>
+	            <div class="vpl_coment_section_input">
+	            	<img src="/images/touxiang.jpg" />
+	                <input id="com_input" type="text" value="我来说两句"></input>
+	            </div>
+	            <ul class="vpl_coment_section_com">
+	                    <li class="vpl_coment_section_com_inf">
+	                        <div style="overflow:hidden;">
+	                            <img src="/images/touxiang.jpg" />
+	                            <div class="vpl_coment_section_com_inf_left">
+	                                <p>暖日阳光</p>
+	                                <p style="color:#909090;font-size:0.65rem;">3小时前</p>
+	                            </div>
+	                            <div class="vpl_coment_section_com_inf_right">
+	                                <span class="iconfont icon-dianzan"></span>
+	                                <span>3000</span>
+	                                <span class="iconfont icon-xiaoxizhongxin"></span>
+	                                <span>200</span>
+	                            </div>
+	                         </div>
+	                        <div class="vpl_coment_section_com_inf_content">
+	                            <p>相对于第二部我跟更喜欢第一部，情节接宕起伏，故事如行云流水</p>
+	                        </div>
+	                    </li>
+	                   
+	      	</ul>
+	      </section>-->
+		<section class="vpl_box vpl_box_remonforyou">
+			<div class="vpl_remonForyou vpl_remonForyou2">
+				<h1>为你推荐</h1>
+				<i class="iconfont icon-guanbi1 vpl_remonForyou_close"></i> </div>
+			<div class="vpl_remonForyou_list vpl_remonForyou_list2">
+				<ul>
+					{dede:arclist typeid='8' row='4' orderby='sortrank' addfields='gaishu' channelid='17'} 
+					<a href="[field:arcurl/]" class="external color-default mytouch">
+					<li>
+						<div class="vpl_remonForyou_list_left"> <img src="[field:litpic/]" class="tuijian-pic"/> </div>
+						<div class="vpl_remonForyou_list_right">
+							<div class="vpl_remonForyou_list_right_des">
+								<p class="field_title">[field:title/]</p>
+								<p class="field_litle">[field:shorttitle/]</p>
+							</div>
+							<div class="vpl_remonForyou_list_right_go iconfont icon-yingdaicon10"></div>
+						</div>
+					</li>
+					</a>
+					{/dede:arclist}
+				</ul>
+			</div>
+			<!--<div class="vpl_slidemore">
+				<p>滑动查看更多</p>
+			</div>-->
+		</section>
+		<div class="no_way"></div>
+	</div>
+	<div class="video-box">
+				<div id="video" class="myvideo"> </div>
+				<div class="vpl_VideoDetail_num padding-lr">
+					<div class="vpl_VideoDetail_num_left"> <span class="iconfont icon-xiaoxizhongxin"></span> <span> 热评<span>{dede:field.reping/}</span>次</span> </div>
+					<div class="vpl_VideoDetail_num_right"> <span class="iconfont icon-weishoucang vpl_Collection" index="1"></span> <span class="iconfont icon-xiazai"></span> <span class="iconfont icon-fenxiang vpl_share" id="button-fenxiang" style="color:#d9d9d9"></span> </div>
+					<div class="vpl_share_pingtai"> </div>
+				</div>
+			</div>
+</div>
+<script type='text/javascript' src='../../js/jquery-2.2.1.min.js' charset='utf-8'></script> 
+<script type='text/javascript' src='../../js/light7.min.js' charset='utf-8'></script> 
+<script type='text/javascript' src='../../js/hprose.js' charset='utf-8'></script> 
+<script type='text/javascript' src='../../js/cn.min.js' charset='utf-8'></script> 
+<script type='text/javascript' src='../../js/cyberplayer.js' charset='utf-8'></script> 
+<script type='text/javascript' src='../../js/jiaohu.js' charset='utf-8'></script> 
+<!--<script type="text/javascript">
+	function qicai(){
+		if("{dede:field.bofangyuan/}" == "qicai"){
+	   		$("#bofangyuan").html("中益七彩");
+	   }
+	}
+	qicai();
+
+
+	 var player = cyberplayer("video").setup({
+	 		width: '100%',
+            height: "100%",
+            backcolor:"#000",
+            file: "{dede:field.videourl runphp='yes'/}$url=@me;$headers = get_headers($url);if(stristr($headers[6],'Location')){@me=str_replace('Location: ','',$headers[6]);}else{@me = $url;}{/dede:field.videourl}",
+            autostart: true,
+            repeat: false,
+            volume: 100,
+            controls: 2,
+        	ak : "29ae328c22344cd789af28826dff55c0",
+   });
+   
+</script>-->
+</body>
+</html>

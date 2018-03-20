@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>编辑资料</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=0.9, minimum-scale=1.0, user-scalable=no, minimal-ui">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no" />
+<link rel="stylesheet" href="../../../css/light7.min.css">
+<link rel="stylesheet" href="../../../css/common.css?v=20170113">
+<link rel="stylesheet" href="../../../css/zg.css?v=20170302">
+<link rel="stylesheet" href="../../../css/iconfont.css">
+<script type='text/javascript' src='https://res.wx.qq.com/open/js/jweixin-1.0.0.js'></script>
+<style type="text/css">
+	#c-touxiang{
+		opacity: 0;
+	}
+	.xiangce{
+		position: relative;
+	}
+	.xiangce span{
+		position: absolute;
+		left: 50%;
+		top: 0;
+		margin-left: -1rem;
+	}
+	#my-touxiang{
+		width: 100%;
+		height: 100%;
+		border-radius:50%;
+	}
+	.toutou{
+		width:3rem;
+		height:3rem!important;
+		padding:0.15rem;
+		background-color:#f5f5f5;
+		border-radius: 50%;
+		line-height: 0rem!important;
+	}
+	.xiugai_an{
+		position: absolute;
+		color: gray;
+		right:1rem;
+		top: 0;
+	}
+</style>
+
+</head>
+<body>
+<div class="page" id="editmessage">
+		
+		<div class="content">
+			<div class="list-block inset text-center registbody no-margin-bottom" id="edme">
+				<ul>
+					<!-- Text inputs -->
+					<li id="me-touxiang">
+						<div class="border-bottom box-90 mytouch"  id="changetx">
+							<div class="item-media">头像
+								<div class="message-right">
+									<div class="toutou"><img id="my-touxiang" /></div>				
+									<span><i class="iconfont icon-yingdaicon10"></i></span>
+								</div>
+							</div>								
+						</div>
+					</li>
+					<li>
+						<div class="border-bottom box-90 mytouch" id="c-username">
+							<div class="item-media">用户名
+								<div class="message-right">
+									<p id="mename"></p>
+									<span><i class="iconfont icon-yingdaicon10"></i></span>
+								</div>
+							</div>								
+						</div>
+					</li>
+					<li>
+						<div class="border-bottom box-90 mytouch">
+							<div class="item-media">性别
+								<div class="message-right">
+									<input type="text" id="megenger"  class="font-80" onfocus="this.blur();"/>
+									<span><i class="iconfont icon-yingdaicon10"></i></span>
+								</div>
+							</div>								
+						</div>
+					</li>
+					<li>
+						<div class="box-90 mytouch">
+							<div class="item-media">生日
+								<div class="message-right">
+									<input type="text" id="brdate" class="kbtn" placeholder="请选择" />
+									
+									<!--<input type="text" id="brdate"  placeholder="请选择" class="font-80" data-toggle="date" closeByOutsideClick="ture"/>-->
+									<span><i class="iconfont icon-yingdaicon10"></i></span>
+								</div>
+							</div>								
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="fenge"></div>
+			<div class="list-block inset text-center registbody no-margin-bottom" id="edme">
+				<ul>
+					<li>
+						<div class="border-bottom box-90 mytouch" id="changemobile">
+							<div class="item-media">绑定手机号
+								<div class="message-right">
+									<p class="color-gray" id="mobilephone"></p>
+									<span><i class="iconfont icon-yingdaicon10"></i></span>
+								</div>
+							</div>								
+						</div>
+					</li>
+					<li>
+						<div class="box-90 mytouch" id="smrz">
+							<div class="item-media">实名认证
+								<div class="message-right">
+									<p class="color-gray" id="isAuth"></p>
+									<span><i class="iconfont icon-yingdaicon10"></i></span>
+								</div>
+							</div>								
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="fenge"></div>
+			<div class="list-block inset text-center registbody no-margin-bottom" id="edme">
+				<ul>
+					<li>
+						<div class="border-bottom box-90 mytouch" id="c-myaddress">
+							<div class="item-media">我的地址
+								<div class="message-right">
+									<span><i class="iconfont icon-yingdaicon10"></i></span>
+								</div>
+							</div>								
+						</div>
+					</li>
+					<li>
+						<div class="border-bottom box-90 mytouch" id="c-secpsword">
+							<div class="item-media">修改安全密码
+								<span id="anquanmima" class="xiugai_an" style=""></span>
+								<div class="message-right">
+									<span><i class="iconfont icon-yingdaicon10"></i></span>
+								</div>
+							</div>								
+						</div>
+					</li>
+					<li>
+						<div class="border-bottom box-90 mytouch" id="c-lgpsword">
+							<div class="item-media">修改登录密码
+								<div class="message-right">
+									<span><i class="iconfont icon-yingdaicon10"></i></span>
+								</div>
+							</div>								
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="newbutton" id="modifymessage">完成 </div> 
+			<div id="datePlugin"></div>
+			<!--<input type="file" id="myfile" />-->
+		</div>
+</div>
+<script type='text/javascript' src='../../../js/jquery-2.2.1.min.js' charset='utf-8'></script> 
+<script type='text/javascript' src='../../../js/light7.min.js' charset='utf-8'></script> 
+<script src='../../../js/cn.min.js'></script>
+<script type='text/javascript' src='../../../js/hprose.js' charset='utf-8'></script>
+<script type='text/javascript' src='../../../js/date.js?v=20170329' charset='utf-8'></script>
+<script type='text/javascript' src='../../../js/iscroll.js?v=20170329' charset='utf-8'></script>
+<script type='text/javascript' src='../../../js/jiaohu.js?v=20170329' charset='utf-8'></script>
+<script type="text/javascript">	
+		$('#brdate').date();
+		$('#brdate').on("click",function(e){
+			e.preventDefault();
+		})		 
+</script>
+</body>
+</html>
